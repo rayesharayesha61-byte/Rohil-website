@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# Redirect non-WWW to WWW
+RewriteCond %{HTTP_HOST} ^rohiltechnologies\.com [NC]
+RewriteRule ^(.*)$ https://www.rohiltechnologies.com/$1 [L,R=301]
+
+# Support for React Router (Single Page Application fallback)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+
+# Optional: Handle .html extension if they exist
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^/]+)$ $1.html [L]
