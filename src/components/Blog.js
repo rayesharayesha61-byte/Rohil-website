@@ -25,7 +25,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 export default function Blog() {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  // const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [expandedPosts, setExpandedPosts] = useState({});
   const [messages, setMessages] = useState({});
 
@@ -3573,6 +3573,105 @@ ${message}`;
       </Typography>
     </Box>
   ),
+},
+{
+id: 36,
+title: "How Technology Creates Better Customer Experiences",
+date: "June 09, 2026",
+category: "CUSTOMER EXPERIENCE",
+image: "/blogs/blog-24.jpeg",
+
+snippet:
+"Technology helps businesses deliver faster service, personalized interactions, and seamless communication to improve customer satisfaction and business growth.",
+
+fullContent: (
+<Box sx={{ mt: 2 }}>
+
+  <Typography
+    variant="body1"
+    paragraph
+    sx={{ mb: 2, color: colors.black, lineHeight: 1.8 }}
+  >
+    In today’s customer-driven market, delivering exceptional customer experiences is one of the most important factors for business success. Customers expect fast service, personalized interactions, and seamless communication across multiple channels. Technology plays a crucial role in meeting these expectations by helping businesses understand customer needs, improve service quality, and build stronger relationships.
+  </Typography>
+
+  <Typography
+    variant="body1"
+    paragraph
+    sx={{ mb: 2, color: colors.black, lineHeight: 1.8 }}
+  >
+    Modern technology solutions enable businesses to provide faster and more efficient customer support. Tools such as live chat, AI-powered chatbots, customer relationship management (CRM) systems, and automated support platforms allow businesses to respond to customer inquiries quickly and accurately. This reduces waiting times and enhances customer satisfaction.
+  </Typography>
+
+  <Typography
+    variant="body1"
+    paragraph
+    sx={{ mb: 2, color: colors.black, lineHeight: 1.8 }}
+  >
+    Personalization is another major advantage of technology. By analyzing customer preferences, purchase history, and behavior, businesses can deliver tailored recommendations, targeted offers, and customized experiences. Customers are more likely to engage with brands that understand their needs and provide relevant solutions.
+  </Typography>
+
+  <Typography
+    variant="body1"
+    paragraph
+    sx={{ mb: 2, color: colors.black, lineHeight: 1.8 }}
+  >
+    Technology also improves accessibility and convenience. Professional websites, mobile applications, and online service platforms allow customers to interact with businesses anytime and from anywhere. Whether booking a service, making a purchase, tracking an order, or accessing support, customers expect a smooth and hassle-free digital experience.
+  </Typography>
+
+  <Typography
+    variant="body1"
+    paragraph
+    sx={{ mb: 2, color: colors.black, lineHeight: 1.8 }}
+  >
+    Real-time communication is essential in today’s competitive business environment. Through email automation, mobile notifications, social media integration, and customer portals, businesses can keep customers informed and engaged throughout their journey. Consistent communication helps build trust and strengthens long-term customer relationships.
+  </Typography>
+
+  <Typography
+    variant="body1"
+    paragraph
+    sx={{ mb: 2, color: colors.black, lineHeight: 1.8 }}
+  >
+    In addition, technology provides valuable insights into customer behavior. Analytics tools help businesses understand customer expectations, identify areas for improvement, and make data-driven decisions. By continuously optimizing products and services based on customer feedback and data, businesses can deliver superior experiences and maintain a competitive edge.
+  </Typography>
+
+  <Typography
+    variant="body1"
+    paragraph
+    sx={{ mb: 2, color: colors.black, lineHeight: 1.8 }}
+  >
+    At Rohil Technologies, we help businesses create exceptional customer experiences through innovative digital solutions. Our services include custom software development, web and mobile application development, CRM integration, UI/UX design, cloud solutions, and business automation systems. We focus on building technology that enhances customer engagement and drives business growth.
+  </Typography>
+
+  <Typography
+    variant="body1"
+    paragraph
+    sx={{ mb: 2, color: colors.black, lineHeight: 1.8 }}
+  >
+    Customer experience is no longer just about providing good service—it is about creating meaningful, seamless, and personalized interactions at every touchpoint. Businesses that leverage technology effectively can strengthen customer loyalty, increase satisfaction, and achieve long-term success.
+  </Typography>
+
+  <Typography
+    variant="body1"
+    paragraph
+    sx={{ mb: 2, color: colors.black, lineHeight: 1.8 }}
+  >
+    At Rohil Technologies, we empower businesses with smart technology solutions that turn customer interactions into lasting relationships.
+  </Typography>
+
+  <Divider sx={{ my: 2, borderColor: colors.grey }} />
+
+  <Typography
+    variant="body2"
+    sx={{ color: colors.grey, fontStyle: "italic" }}
+  >
+    Keywords: Customer Experience, Technology Solutions, CRM,
+    Customer Engagement, Business Growth, Rohil Technologies
+  </Typography>
+
+</Box>
+
+),
 },
   ];
 

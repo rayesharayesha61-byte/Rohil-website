@@ -2,6 +2,7 @@
 import React from "react";
 import { Box, Typography, Container, Grid, Divider } from "@mui/material";
 import colors from "../Colors";
+import { Helmet } from "react-helmet-async";
 import {
   Cloud,
   Security,
@@ -11,7 +12,8 @@ import {
   BarChart,
 } from "@mui/icons-material";
 import { Icon } from "@iconify/react";
-
+import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 export default function SoftwareDev() {
   const devPlatforms = [
     { title: "Web Applications", icon: "mdi:web" },
@@ -55,7 +57,28 @@ export default function SoftwareDev() {
     { title: "Scala", icon: "simple-icons:scala" },
     { title: "Perl", icon: "simple-icons:perl" },
   ];
-
+const faq = [
+{
+q:"What is custom software development?",
+a:"Custom software is built specifically for business requirements."
+},
+{
+q:"How long does development take?",
+a:"Usually 4–24 weeks depending on scope."
+},
+{
+q:"Do you provide maintenance?",
+a:"Yes, we provide ongoing maintenance and support."
+},
+{
+q:"What technologies do you use?",
+a:"We work with React, Node.js, Java, Python, .NET, PHP and cloud technologies."
+},
+{
+q:"Can software integrate with existing systems?",
+a:"Yes, we develop integrations for ERP, CRM, APIs and third-party platforms."
+}
+];
   const services = [
     {
       title: "Web Applications",
@@ -106,6 +129,59 @@ export default function SoftwareDev() {
 
   return (
     <>
+      <Helmet>
+        <title>
+          Software Development Services | Rohil Technologies
+        </title>
+
+        <meta
+          name="description"
+          content="Custom software development services by Rohil Technologies. Build scalable, secure, and innovative software solutions tailored to your business."
+        />
+
+        <meta
+          name="keywords"
+          content="
+Software Development Services,
+Custom Software Development,
+Enterprise Software Development,
+Software Development Company,
+Business Software Solutions
+"
+        />
+
+        <link
+          rel="canonical"
+          href="https://www.rohiltechnologies.com/software-development"
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Service",
+                "name": "Software Development Services",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "Rohil Technologies"
+                }
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity":
+                  faq.map(item => ({
+                    "@type": "Question",
+                    "name": item.q,
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": item.a
+                    }
+                  }))
+              }
+            ]
+          })}
+        </script>
+      </Helmet>
       {/* ===== Hero Banner ===== */}
       <Box
         sx={{
@@ -123,21 +199,37 @@ export default function SoftwareDev() {
       >
         <Box sx={{ position: "relative", zIndex: 2 }}>
           <Typography
-            variant="h2"
+            variant="h1"
             sx={{
               fontWeight: "bold",
               mb: 2,
               fontSize: { xs: "2rem", md: "3rem" },
             }}
           >
-            Software Development
+            Software Development Services
           </Typography>
         </Box>
         <Box
           sx={{ position: "absolute", inset: 0, bgcolor: "rgba(0,0,0,0.5)" }}
         />
       </Box>
+      <Container sx={{ py: 6 }}>
 
+        <Typography variant="body1">
+
+          Rohil Technologies provides custom software
+          development services for businesses looking to
+          improve operations, automate workflows, and
+          accelerate digital transformation.
+
+          We specialize in enterprise software,
+          web-based applications, cloud solutions,
+          CRM systems, ERP platforms, SaaS products,
+          and scalable business applications.
+
+        </Typography>
+
+      </Container>
       {/* ===== Section: Intro ===== */}
       <Container sx={{ py: 4 }}>
         <Box
@@ -151,14 +243,18 @@ export default function SoftwareDev() {
           <Box sx={{ flex: 1 }}>
             <img
               src="/images/softdev1.png"
-              alt="Software Development"
-              style={{ width: "100%", borderRadius: "12px" }}
+              loading="lazy"
+              alt="Custom software development services"
+              style={{
+                width: "100%",
+                borderRadius: "12px"
+              }}
             />
           </Box>
 
           <Box sx={{ flex: 1 }}>
             <Typography
-              variant="h3"
+              variant="h2"
               sx={{ mb: 3, fontWeight: "bold", color: colors.darkBlue }}
             >
               Custom Software Solutions
@@ -189,7 +285,7 @@ export default function SoftwareDev() {
         >
           <Box sx={{ flex: 1 }}>
             <Typography
-              variant="h3"
+              variant="h2"
               sx={{ mb: 3, fontWeight: "bold", color: colors.darkBlue }}
             >
               End-to-End Software Solutions
@@ -210,7 +306,7 @@ export default function SoftwareDev() {
           <Box sx={{ flex: 1 }}>
             <img
               src="/images/softdev2.png"
-              alt="Software Development"
+            alt="Custom software development services"
               style={{ width: "80%", borderRadius: "12px" }}
             />
           </Box>
@@ -221,7 +317,7 @@ export default function SoftwareDev() {
       {/* ===== Our Services ===== */}
       <Container sx={{ py: 4 }}>
         <Typography
-          variant="h3"
+          variant="h2"
           sx={{
             textAlign: "center",
             fontWeight: "bold",
@@ -279,7 +375,7 @@ export default function SoftwareDev() {
       {/* ===== Development Platforms ===== */}
       <Container sx={{ py: 4 }}>
         <Typography
-          variant="h4"
+          variant="h2"
           sx={{
             fontWeight: "bold",
             color: colors.darkBlue,
@@ -329,7 +425,7 @@ export default function SoftwareDev() {
       {/* ===== What We Do ===== */}
       <Container sx={{ py: 4 }}>
         <Typography
-          variant="h4"
+          variant="h2"
           sx={{
             fontWeight: "bold",
             color: colors.darkBlue,
@@ -392,7 +488,7 @@ export default function SoftwareDev() {
       {/* ===== Industries ===== */}
       <Container sx={{ py: 4 }}>
         <Typography
-          variant="h4"
+          variant="h2"
           sx={{
             fontWeight: "bold",
             color: colors.darkBlue,
@@ -454,7 +550,7 @@ export default function SoftwareDev() {
       {/* ===== Technologies ===== */}
       <Container sx={{ py: 4 }}>
         <Typography
-          variant="h4"
+          variant="h2"
           sx={{
             fontWeight: "bold",
             color: colors.darkBlue,
@@ -499,6 +595,231 @@ export default function SoftwareDev() {
             </Grid>
           ))}
         </Grid>
+      </Container>
+      {/* ===== Technologies ===== */}
+      <Container sx={{ py: 4 }}>
+        ...
+      </Container>
+{/* ===== Why Choose Rohil Technologies ===== */}
+
+<Container sx={{ py: 8 }}>
+
+<Typography
+variant="h2"
+sx={{
+textAlign: "center",
+fontWeight: "bold",
+color: colors.darkBlue,
+mb: 2
+}}
+>
+Why Choose Rohil Technologies
+</Typography>
+
+<Typography
+sx={{
+textAlign: "center",
+color: colors.grey,
+mb: 6
+}}
+>
+We deliver scalable and secure software solutions.
+</Typography>
+
+<Grid
+container
+spacing={4}
+justifyContent="center"
+alignItems="center"
+>
+
+{[
+"Fast Delivery",
+"Scalable Architecture",
+"Long-Term Support"
+].map((item) => (
+
+<Grid
+item
+xs={12}
+sm={8}
+md={3}
+key={item}
+>
+
+<Box
+sx={{
+p: 4,
+textAlign: "center",
+borderRadius: 3,
+boxShadow: 3,
+height: "100%",
+
+"&:hover": {
+transform: "translateY(-6px)"
+},
+
+transition: "0.3s"
+}}
+>
+
+<Typography
+variant="h5"
+sx={{
+fontWeight: "bold",
+color: colors.darkBlue,
+mb: 2
+}}
+>
+{item}
+</Typography>
+
+<Typography sx={{ color: colors.grey }}>
+Reliable and scalable solutions for business growth.
+</Typography>
+
+</Box>
+
+</Grid>
+
+))}
+
+</Grid>
+
+</Container>
+{/* ===== CTA Section ===== */}
+
+<Container sx={{ py: 8 }}>
+
+<Box
+sx={{
+textAlign: "center",
+p: { xs: 4, md: 8 },
+borderRadius: "24px",
+
+background:
+"linear-gradient(135deg,#0f172a,#1e3a8a)",
+
+color: "#fff",
+
+boxShadow:
+"0 15px 40px rgba(0,0,0,.18)",
+
+maxWidth: "1000px",
+
+mx: "auto"
+}}
+>
+
+<Typography
+variant="h3"
+sx={{
+fontWeight: "bold",
+mb: 2,
+fontSize: {
+xs: "2rem",
+md: "3rem"
+}
+}}
+>
+Build Custom Software For Your Business
+</Typography>
+
+<Typography
+sx={{
+mt: 2,
+fontSize: "1.1rem",
+opacity: .9,
+maxWidth: "700px",
+mx: "auto",
+lineHeight: 1.8
+}}
+>
+Transform your ideas into scalable, secure, and
+high-performance software solutions tailored to
+your business needs.
+</Typography>
+
+<Box sx={{ mt: 4 }}>
+
+<Button
+component={Link}
+to="/contact"
+variant="contained"
+sx={{
+px: 4,
+py: 1.5,
+borderRadius: "50px",
+fontWeight: "bold",
+fontSize: "16px",
+
+background: "#fff",
+color: "#1e3a8a",
+
+"&:hover": {
+background: "#f3f4f6"
+}
+}}
+>
+Get Free Consultation
+</Button>
+
+</Box>
+
+</Box>
+
+</Container>
+      {/* ===== FAQ Section ===== */}
+
+      <Container sx={{ py: 8 }}>
+
+        <Typography
+          variant="h2"
+          sx={{
+            textAlign: "center",
+            fontWeight: "bold",
+            color: colors.darkBlue,
+            mb: 4
+          }}
+        >
+          Frequently Asked Questions
+        </Typography>
+
+        {
+          faq.map((f) => (
+            <Box
+              key={f.q}
+              sx={{
+                mb: 3,
+                p: 3,
+                boxShadow: 2,
+                borderRadius: 2
+              }}
+            >
+
+              <Typography
+                variant="h6"
+                sx={{
+                  fontWeight: "bold",
+                  color: colors.darkBlue
+                }}
+              >
+                {f.q}
+              </Typography>
+
+              <Typography
+                sx={{
+                  color: colors.grey,
+                  mt: 1
+                }}
+              >
+                {f.a}
+              </Typography>
+
+            </Box>
+          ))
+        }
+
       </Container>
     </>
   );
