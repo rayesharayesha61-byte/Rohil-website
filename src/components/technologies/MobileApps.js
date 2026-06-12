@@ -20,6 +20,14 @@ import {
   BarChart,
 } from "@mui/icons-material";
 import { Icon } from "@iconify/react";
+import { Helmet } from "react-helmet-async";
+import {
+  Accordion,
+  AccordionSummary,
+  AccordionDetails
+} from "@mui/material";
+
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export default function MobileApps() {
   const devPlatforms = [
@@ -55,6 +63,24 @@ export default function MobileApps() {
     { title: "React Native", icon: "mdi:react" },
     { title: "Adobe Illustrator", icon: "mdi:adobe" },
     { title: "Unity", icon: "mdi:unity" },
+  ];
+  const faq = [
+    {
+      q: "How long does mobile app development take?",
+      a: "Usually 6–16 weeks depending on project complexity."
+    },
+    {
+      q: "Do you build Android and iOS apps?",
+      a: "Yes, we develop Android, iOS, and cross-platform apps."
+    },
+    {
+      q: "Do you provide maintenance services?",
+      a: "Yes, we offer updates, monitoring, and ongoing support."
+    },
+    {
+      q: "Can existing apps be upgraded?",
+      a: "Yes, we modernize and improve existing applications."
+    }
   ];
   const services = [
     {
@@ -104,6 +130,103 @@ export default function MobileApps() {
   );
   return (
     <>
+
+
+  <Helmet>
+
+<title>
+Mobile App Development Services | Rohil Technologies
+</title>
+
+<meta
+name="description"
+content="Professional mobile app development services by Rohil Technologies. Build secure, scalable Android, iOS and cross-platform apps tailored to your business."
+/>
+
+<meta
+name="keywords"
+content="Mobile App Development Services, Android App Development, iOS App Development"
+/>
+
+<link
+rel="canonical"
+href="https://www.rohiltechnologies.com/mobile"
+/>
+
+{/* Open Graph */}
+<meta property="og:type" content="website" />
+
+<meta
+property="og:title"
+content="Mobile App Development Services | Rohil Technologies"
+/>
+
+<meta
+property="og:description"
+content="Build secure, scalable Android, iOS and cross-platform mobile apps."
+/>
+
+<meta
+property="og:image"
+content="https://www.rohiltechnologies.com/images/mobdev.png"
+/>
+
+<meta
+property="og:url"
+content="https://www.rohiltechnologies.com/mobile"
+/>
+
+<meta
+name="twitter:card"
+content="summary_large_image"
+/>
+
+{/* Service Schema */}
+<script type="application/ld+json">
+{JSON.stringify({
+"@context":"https://schema.org",
+"@type":"Service",
+serviceType:"Mobile App Development Services",
+
+provider:{
+"@type":"Organization",
+"name":"Rohil Technologies",
+"url":"https://www.rohiltechnologies.com"
+},
+
+areaServed:"India",
+
+description:
+"Professional Android, iOS and cross-platform mobile application development services."
+})}
+</script>
+
+{/* Breadcrumb Schema */}
+<script type="application/ld+json">
+{JSON.stringify({
+"@context":"https://schema.org",
+
+"@type":"BreadcrumbList",
+
+itemListElement:[
+{
+"@type":"ListItem",
+position:1,
+name:"Home",
+item:"https://www.rohiltechnologies.com"
+},
+
+{
+"@type":"ListItem",
+position:2,
+name:"Mobile App Development",
+item:"https://www.rohiltechnologies.com/mobile"
+}
+]
+})}
+</script>
+
+</Helmet>
       {/* ===== Hero Banner ===== */}
       <Box
         sx={{
@@ -121,14 +244,14 @@ export default function MobileApps() {
       >
         <Box sx={{ position: "relative", zIndex: 2 }}>
           <Typography
-            variant="h2"
+            variant="h1"
             sx={{
               fontWeight: "bold",
               mb: 2,
               fontSize: { xs: "2rem", md: "3rem" },
             }}
           >
-            Application Development
+            Mobile App Development Services
           </Typography>
         </Box>
         <Box
@@ -148,9 +271,15 @@ export default function MobileApps() {
         >
           {/* Left Side - Image */}
           <Box sx={{ flex: 1 }}>
-            <img
+            {/* <img
               src="/images/mobdev1.png"
               alt="Mobile App Development"
+              style={{ width: "100%", borderRadius: "12px" }}
+            /> */}
+            <img
+              src="/images/mobdev1.png"
+              alt="Custom Mobile App Development Services"
+              loading="lazy"
               style={{ width: "100%", borderRadius: "12px" }}
             />
           </Box>
@@ -213,7 +342,7 @@ export default function MobileApps() {
           <Box sx={{ flex: 1 }}>
             <img
               src="/images/mobdev2.png"
-              alt="Mobile App Development"
+              alt="Mobile Game Development Company"
               style={{ width: "100%", borderRadius: "12px" }}
             />
           </Box>
@@ -224,7 +353,7 @@ export default function MobileApps() {
       {/* Service */}
       <Container sx={{ py: 4 }}>
         <Typography
-          variant="h3"
+          variant="h1"
           sx={{
             textAlign: "center",
             fontWeight: "bold",
@@ -368,7 +497,7 @@ export default function MobileApps() {
             mb: 2,
           }}
         >
-          Development
+          Development Process
         </Typography>
         <Typography sx={{ textAlign: "center", color: colors.grey, mb: 6 }}>
           Our skilled and dexterous development team ensures your product is
@@ -594,6 +723,169 @@ export default function MobileApps() {
             </Grid>
           ))}
         </Grid>
+        {/* ===== FAQ Section ===== */}
+
+        <Container sx={{ py: 6 }}>
+
+          <Typography
+            variant="h3"
+            sx={{
+              textAlign: "center",
+              fontWeight: "bold",
+              color: colors.darkBlue,
+              mb: 4
+            }}
+          >
+            Frequently Asked Questions
+          </Typography>
+
+          {faq.map((item, i) => (
+
+            <Accordion key={i} sx={{ mb: 2 }}>
+
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+              >
+                <Typography sx={{ fontWeight: "bold" }}>
+                  {item.q}
+                </Typography>
+              </AccordionSummary>
+
+              <AccordionDetails>
+                <Typography sx={{ color: colors.grey }}>
+                  {item.a}
+                </Typography>
+              </AccordionDetails>
+
+            </Accordion>
+
+          ))}
+
+        </Container>
+        {/* ===== CTA Section ===== */}
+
+        <Container sx={{ py: 8 }}>
+          <Box
+            sx={{
+              background: `linear-gradient(135deg, ${colors.primary}, ${colors.darkBlue})`,
+              borderRadius: 5,
+              px: { xs: 3, md: 8 },
+              py: { xs: 6, md: 8 },
+              textAlign: "center",
+              color: "#fff",
+              position: "relative",
+              overflow: "hidden",
+
+              "&::before": {
+                content: '""',
+                position: "absolute",
+                width: "220px",
+                height: "220px",
+                borderRadius: "50%",
+                background: "rgba(255,255,255,0.08)",
+                top: "-60px",
+                right: "-60px",
+              },
+
+              "&::after": {
+                content: '""',
+                position: "absolute",
+                width: "180px",
+                height: "180px",
+                borderRadius: "50%",
+                background: "rgba(255,255,255,0.05)",
+                bottom: "-50px",
+                left: "-50px",
+              },
+            }}
+          >
+            <Typography
+              variant="h3"
+              sx={{
+                fontWeight: "bold",
+                mb: 2,
+                position: "relative",
+                zIndex: 2,
+              }}
+            >
+              Build Your Mobile App Today
+            </Typography>
+
+            <Typography
+              sx={{
+                maxWidth: "700px",
+                mx: "auto",
+                mb: 4,
+                opacity: 0.9,
+                position: "relative",
+                zIndex: 2,
+              }}
+            >
+              Launch secure, scalable, and high-performance
+              Android, iOS, and cross-platform applications
+              tailored to your business requirements.
+            </Typography>
+
+            <Button
+              variant="contained"
+              size="large"
+              href="/contact"
+              sx={{
+                bgcolor: "#fff",
+                color: colors.primary,
+                px: 5,
+                py: 1.5,
+                borderRadius: "30px",
+                fontWeight: "bold",
+                textTransform: "none",
+                fontSize: "16px",
+                boxShadow: 5,
+                position: "relative",
+                zIndex: 2,
+
+                "&:hover": {
+                  bgcolor: "#f3f3f3",
+                  transform: "translateY(-3px)",
+                },
+              }}
+            >
+              Get Free Consultation →
+            </Button>
+          </Box>
+        </Container>
+        {/* ===== Why Choose Rohil Technologies ===== */}
+        <Container sx={{ py: 6 }}>
+          <Typography
+            variant="h3"
+            sx={{
+              textAlign: "center",
+              fontWeight: "bold",
+              color: colors.darkBlue,
+              mb: 4,
+            }}
+          >
+            Why Choose Rohil Technologies
+          </Typography>
+
+          <Typography
+            sx={{
+              textAlign: "center",
+              color: colors.grey,
+              lineHeight: 2,
+              maxWidth: "900px",
+              mx: "auto",
+            }}
+          >
+            We deliver custom mobile application development
+            services designed for scalability, performance,
+            and business growth. Our team specializes in
+            Android, iOS, and cross-platform solutions using
+            modern technologies and user-focused design.
+            From planning and UI/UX to deployment and
+            maintenance, we ensure secure, high-quality,
+            and business-driven mobile applications.
+          </Typography>
+        </Container>
       </Container>
     </>
   );
