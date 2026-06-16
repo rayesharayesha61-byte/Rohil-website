@@ -16,10 +16,19 @@ import {
   BugReport,
   Speed,
   BarChart,
+  Assignment,
+  DesignServices,
+  Code,
+  Storage,
+
+  RocketLaunch
 } from "@mui/icons-material";
 import { Icon } from "@iconify/react";
-
+import { useNavigate } from "react-router-dom";
+import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 export default function WebTechnologies() {
+  const navigate = useNavigate();
   const devPlatforms = [
     { title: "HTML / CSS / JavaScript", icon: "mdi:language-html5" },
     { title: "React / Angular / Vue", icon: "mdi:react" },
@@ -116,7 +125,14 @@ export default function WebTechnologies() {
       icon: "mdi:cart-outline",
     },
   ];
-
+  const steps = [
+    { title: "Requirement Analysis", icon: <Assignment /> },
+    { title: "UI/UX Design", icon: <DesignServices /> },
+    { title: "Frontend Development", icon: <Code /> },
+    { title: "Backend Development", icon: <Storage /> },
+    { title: "Testing", icon: <BugReport /> },
+    { title: "Deployment", icon: <RocketLaunch /> },
+  ];
   return (
     <>
       {/* ===== Hero Banner ===== */}
@@ -136,14 +152,14 @@ export default function WebTechnologies() {
       >
         <Box sx={{ position: "relative", zIndex: 2 }}>
           <Typography
-            variant="h2"
+            variant="h1"
             sx={{
               fontWeight: "bold",
               mb: 2,
               fontSize: { xs: "2rem", md: "3rem" },
             }}
           >
-            Website Development
+            Website Development Services | Rohil Technologies
           </Typography>
         </Box>
         <Box
@@ -564,7 +580,69 @@ export default function WebTechnologies() {
             </Box>
           ))}
         </Box>
+        <Container sx={{ py: 8, maxWidth: "lg" }}>
 
+          {/* Title */}
+          <Typography
+            variant="h4"
+            sx={{
+              fontWeight: "bold",
+              textAlign: "center",
+              mb: 6,
+              color: "#0f172a"
+            }}
+          >
+            Our Development Process
+          </Typography>
+
+          {/* Steps */}
+          <Grid container spacing={4} justifyContent="center">
+
+            {steps.map((item, i) => (
+              <Grid item xs={12} sm={6} md={4} key={i}>
+
+                <Box
+                  sx={{
+                    p: 4,
+                    textAlign: "center",
+                    borderRadius: 3,
+                    background: "#ffffff",
+                    boxShadow: "0 8px 25px rgba(0,0,0,0.08)",
+                    transition: "0.3s",
+                    cursor: "pointer",
+                    maxWidth: 350,
+                    mx: "auto",
+
+                    "&:hover": {
+                      transform: "translateY(-10px)",
+                      boxShadow: "0 15px 35px rgba(0,0,0,0.15)"
+                    }
+                  }}
+                >
+
+                  {/* Icon */}
+                  <Box sx={{ color: "#2563eb", mb: 2, fontSize: 40 }}>
+                    {item.icon}
+                  </Box>
+
+                  {/* Step */}
+                  <Typography sx={{ color: "#22c55e", fontWeight: "bold" }}>
+                    Step {i + 1}
+                  </Typography>
+
+                  {/* Title */}
+                  <Typography sx={{ fontWeight: "bold", mt: 1, color: "#0f172a" }}>
+                    {item.title}
+                  </Typography>
+
+                </Box>
+
+              </Grid>
+            ))}
+
+          </Grid>
+
+        </Container>
         {/* ===== Technology ===== */}
         <Typography
           variant="h4"
@@ -616,6 +694,225 @@ export default function WebTechnologies() {
             </Grid>
           ))}
         </Grid>
+        <Container sx={{ py: 8, background: "#f8fafc" }}>
+
+          <Typography
+            variant="h4"
+            sx={{
+              fontWeight: "bold",
+              textAlign: "center",
+              mb: 5,
+              color: "#0f172a"
+            }}
+          >
+            What Our Clients Say
+          </Typography>
+
+          <Grid container spacing={4}>
+
+            {[
+              { name: "Client A", text: "Great website development service!" },
+              { name: "Client B", text: "Fast delivery and professional work." },
+              { name: "Client C", text: "Very satisfied with the design quality." },
+            ].map((item, i) => (
+              <Grid item xs={12} sm={6} md={4} key={i}>
+
+                <Box
+                  sx={{
+                    p: 4,
+                    borderRadius: 3,
+                    background: "white",
+                    boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
+                    transition: "0.3s",
+                    textAlign: "center",
+                    "&:hover": {
+                      transform: "translateY(-8px)",
+                      boxShadow: "0 15px 40px rgba(0,0,0,0.15)"
+                    }
+                  }}
+                >
+
+                  {/* Quote icon style */}
+                  <Typography sx={{ fontSize: 40, color: "#22c55e" }}>
+                    ❝
+                  </Typography>
+
+                  {/* Text */}
+                  <Typography sx={{ color: "#475569", mt: 1, mb: 3, lineHeight: 1.7 }}>
+                    {item.text}
+                  </Typography>
+
+                  {/* Name */}
+                  <Typography sx={{ fontWeight: "bold", color: "#0f172a" }}>
+                    {item.name}
+                  </Typography>
+
+                </Box>
+
+              </Grid>
+            ))}
+
+          </Grid>
+
+        </Container>
+        {/* FAQ SECTION */}
+        <Container sx={{ py: 8 }}>
+
+          {/* Title */}
+          <Typography
+            variant="h4"
+            sx={{
+              fontWeight: "bold",
+              textAlign: "center",
+              mb: 5,
+              color: "#0f172a",
+              letterSpacing: 1
+            }}
+          >
+            Frequently Asked Questions
+          </Typography>
+
+
+          {/* FAQ Box */}
+          <Box
+            sx={{
+              maxWidth: 900,
+              mx: "auto"
+            }}
+          >
+
+            {[
+              {
+                q: "How much does a website development cost in India?",
+                a: "Cost depends on features, design, and functionality. Basic websites are affordable, while advanced websites cost more based on requirements."
+              },
+              {
+                q: "How long does it take to build a website?",
+                a: "Basic websites take 5–10 days, while complex websites or e-commerce platforms may take 2–6 weeks."
+              },
+              {
+                q: "Will my website be mobile-friendly?",
+                a: "Yes, all our websites are fully responsive and optimized for mobile, tablet, and desktop devices."
+              },
+              {
+                q: "Do you provide SEO-friendly websites?",
+                a: "Yes, we build SEO-optimized websites with fast loading speed, clean code, and proper structure for better Google ranking."
+              },
+              {
+                q: "Do you offer website maintenance services?",
+                a: "Yes, we provide ongoing maintenance, updates, security checks, and performance optimization."
+              }
+            ].map((item, i) => (
+              <Accordion
+                key={i}
+                sx={{
+                  mb: 2,
+                  borderRadius: 2,
+                  boxShadow: "0px 4px 15px rgba(0,0,0,0.08)",
+                  "&:before": { display: "none" },
+                  overflow: "hidden",
+                  transition: "0.3s",
+                  "&:hover": {
+                    transform: "scale(1.01)"
+                  }
+                }}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  sx={{
+                    backgroundColor: "#f8fafc",
+                    fontWeight: "bold"
+                  }}
+                >
+                  <Typography sx={{ fontWeight: 600, color: "#1e293b" }}>
+                    {item.q}
+                  </Typography>
+                </AccordionSummary>
+
+                <AccordionDetails
+                  sx={{
+                    backgroundColor: "#ffffff"
+                  }}
+                >
+                  <Typography sx={{ color: "#64748b", lineHeight: 1.8 }}>
+                    {item.a}
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+            ))}
+
+          </Box>
+
+        </Container>
+        <Container
+          sx={{
+            py: 8,
+            textAlign: "center",
+            background: "linear-gradient(135deg, #0f172a, #1e3a8a)",
+            borderRadius: 4,
+            color: "white",
+            mt: 5
+          }}
+        >
+
+          <Typography variant="h4" sx={{ fontWeight: "bold", mb: 2 }}>
+            Start Your Website Project Today
+          </Typography>
+
+          <Typography sx={{ color: "#cbd5e1", mb: 4 }}>
+            Get a free consultation and build a high-performance website for your business.
+          </Typography>
+
+          <Box sx={{ display: "flex", justifyContent: "center", gap: 2, flexWrap: "wrap" }}>
+
+            {/* CONTACT PAGE BUTTON */}
+            <Box
+              component="button"
+              onClick={() => navigate("/contact")}
+              sx={{
+                padding: "12px 28px",
+                background: "#22c55e",
+                color: "white",
+                border: "none",
+                borderRadius: "8px",
+                fontWeight: "bold",
+                cursor: "pointer",
+                transition: "0.3s",
+                "&:hover": {
+                  transform: "scale(1.05)",
+                  background: "#16a34a"
+                }
+              }}
+            >
+              Get Free Quote
+            </Box>
+
+            {/* WHATSAPP BUTTON */}
+            <Box
+              component="a"
+              href="https://wa.me/919751867879"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                padding: "12px 28px",
+                background: "#25D366",
+                color: "white",
+                borderRadius: "8px",
+                textDecoration: "none",
+                fontWeight: "bold",
+                transition: "0.3s",
+                "&:hover": {
+                  transform: "scale(1.05)",
+                  background: "#1ebe5d"
+                }
+              }}
+            >
+              WhatsApp Us
+            </Box>
+
+          </Box>
+
+        </Container>
       </Container>
     </>
   );

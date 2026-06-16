@@ -132,101 +132,101 @@ export default function MobileApps() {
     <>
 
 
-  <Helmet>
+      <Helmet>
 
-<title>
-Mobile App Development Services | Rohil Technologies
-</title>
+        <title>
+          Mobile App Development Services | Rohil Technologies
+        </title>
 
-<meta
-name="description"
-content="Professional mobile app development services by Rohil Technologies. Build secure, scalable Android, iOS and cross-platform apps tailored to your business."
-/>
+        <meta
+          name="description"
+          content="Professional mobile app development services by Rohil Technologies. Build secure, scalable Android, iOS and cross-platform apps tailored to your business."
+        />
 
-<meta
-name="keywords"
-content="Mobile App Development Services, Android App Development, iOS App Development"
-/>
+        <meta
+          name="keywords"
+          content="Mobile App Development Services, Android App Development, iOS App Development"
+        />
 
-<link
-rel="canonical"
-href="https://www.rohiltechnologies.com/mobile"
-/>
+        <link
+          rel="canonical"
+          href="https://www.rohiltechnologies.com/mobile"
+        />
 
-{/* Open Graph */}
-<meta property="og:type" content="website" />
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
 
-<meta
-property="og:title"
-content="Mobile App Development Services | Rohil Technologies"
-/>
+        <meta
+          property="og:title"
+          content="Mobile App Development Services | Rohil Technologies"
+        />
 
-<meta
-property="og:description"
-content="Build secure, scalable Android, iOS and cross-platform mobile apps."
-/>
+        <meta
+          property="og:description"
+          content="Build secure, scalable Android, iOS and cross-platform mobile apps."
+        />
 
-<meta
-property="og:image"
-content="https://www.rohiltechnologies.com/images/mobdev.png"
-/>
+        <meta
+          property="og:image"
+          content="https://www.rohiltechnologies.com/images/mobdev.png"
+        />
 
-<meta
-property="og:url"
-content="https://www.rohiltechnologies.com/mobile"
-/>
+        <meta
+          property="og:url"
+          content="https://www.rohiltechnologies.com/mobile"
+        />
 
-<meta
-name="twitter:card"
-content="summary_large_image"
-/>
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+        />
 
-{/* Service Schema */}
-<script type="application/ld+json">
-{JSON.stringify({
-"@context":"https://schema.org",
-"@type":"Service",
-serviceType:"Mobile App Development Services",
+        {/* Service Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            serviceType: "Mobile App Development Services",
 
-provider:{
-"@type":"Organization",
-"name":"Rohil Technologies",
-"url":"https://www.rohiltechnologies.com"
-},
+            provider: {
+              "@type": "Organization",
+              "name": "Rohil Technologies",
+              "url": "https://www.rohiltechnologies.com"
+            },
 
-areaServed:"India",
+            areaServed: "India",
 
-description:
-"Professional Android, iOS and cross-platform mobile application development services."
-})}
-</script>
+            description:
+              "Professional Android, iOS and cross-platform mobile application development services."
+          })}
+        </script>
 
-{/* Breadcrumb Schema */}
-<script type="application/ld+json">
-{JSON.stringify({
-"@context":"https://schema.org",
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
 
-"@type":"BreadcrumbList",
+            "@type": "BreadcrumbList",
 
-itemListElement:[
-{
-"@type":"ListItem",
-position:1,
-name:"Home",
-item:"https://www.rohiltechnologies.com"
-},
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.rohiltechnologies.com"
+              },
 
-{
-"@type":"ListItem",
-position:2,
-name:"Mobile App Development",
-item:"https://www.rohiltechnologies.com/mobile"
-}
-]
-})}
-</script>
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Mobile App Development",
+                item: "https://www.rohiltechnologies.com/mobile"
+              }
+            ]
+          })}
+        </script>
 
-</Helmet>
+      </Helmet>
       {/* ===== Hero Banner ===== */}
       <Box
         sx={{
