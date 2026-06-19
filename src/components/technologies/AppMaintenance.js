@@ -18,8 +18,14 @@ import {
   TableHead,
   TableRow,
   Paper,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
 } from "@mui/material";
 
+import { Link } from "react-router-dom";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { Helmet } from "react-helmet-async";
 export default function AppMaintenance() {
   const services = [
     {
@@ -127,9 +133,103 @@ export default function AppMaintenance() {
     { title: "New Relic", icon: "mdi:chart-line" },
     { title: "ServiceNow", icon: "mdi:tools" },
   ];
-
+  const faqs = [
+    {
+      question: "What is Application Maintenance?",
+      answer:
+        "Application maintenance helps improve performance, security, reliability, and long-term software stability.",
+    },
+    {
+      question: "Do you provide 24/7 support?",
+      answer:
+        "Yes, we provide continuous monitoring and support services.",
+    },
+    {
+      question: "Can you maintain existing applications?",
+      answer:
+        "Yes, we support and maintain both existing and third-party applications.",
+    },
+  ];
+  const maintenanceTypes = [
+    {
+      title: "Corrective Maintenance",
+      desc: "Fixing software bugs and resolving issues."
+    },
+    {
+      title: "Preventive Maintenance",
+      desc: "Preventing future failures through updates."
+    },
+    {
+      title: "Adaptive Maintenance",
+      desc: "Updating applications for changing environments."
+    },
+    {
+      title: "Perfective Maintenance",
+      desc: "Improving performance and user experience."
+    },
+    {
+      title: "Application Monitoring",
+      desc: "Continuous monitoring and issue detection."
+    },
+    {
+      title: "Performance Optimization",
+      desc: "Enhancing speed and system efficiency."
+    },
+    {
+      title: "Security Updates",
+      desc: "Applying security patches and improvements."
+    },
+    {
+      title: "SLA Support",
+      desc: "Providing agreed response and support timelines."
+    },
+  ];
   return (
     <>
+
+
+      <Helmet>
+        <title>
+          Application Maintenance Services | Rohil Technologies
+        </title>
+
+        <meta
+          name="description"
+          content="Professional application maintenance services by Rohil Technologies. Improve software performance, security, monitoring, and support."
+        />
+
+        <meta
+          name="keywords"
+          content="
+Application Maintenance Services,
+Software Maintenance Services,
+Application Support Services,
+Application Monitoring
+"
+        />
+
+        <link
+          rel="canonical"
+          href="https://www.rohiltechnologies.com/application-maintenance"
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+
+            "@type": "Service",
+
+            "name": "Application Maintenance Services",
+
+            "description":
+              "Professional application maintenance and support services.",
+
+            "provider": {
+              "@type": "Organization",
+              "name": "Rohil Technologies"
+            }
+          })}
+        </script>
+      </Helmet>
       {/* ===== Hero Banner ===== */}
       <Box
         sx={{
@@ -147,7 +247,8 @@ export default function AppMaintenance() {
       >
         <Box sx={{ position: "relative", zIndex: 2 }}>
           <Typography
-            variant="h2"
+            component="h2"
+            variant="h3"
             sx={{
               fontWeight: "bold",
               mb: 2,
@@ -204,7 +305,8 @@ export default function AppMaintenance() {
             <Box
               component="img"
               src="/images/appmain1.png"
-              alt="App Maintenance"
+              loading="lazy"
+              alt="Application Maintenance Services by Rohil Technologies"
               sx={{
                 width: "100%",
                 borderRadius: 3,
@@ -366,6 +468,7 @@ export default function AppMaintenance() {
           </Table>
         </TableContainer>
       </Container>
+
       {/* ===== Technology ===== */}
       <Typography
         variant="h4"
@@ -390,7 +493,7 @@ export default function AppMaintenance() {
 
       <Grid container spacing={4} justifyContent="center" mb={8}>
         {technologies.map((item, i) => (
-          <Grid item xs={12} sm={6} md={2.3} key={i}>
+          <Grid item xs={12} sm={6} md={3} key={i}>
             <Box
               sx={{
                 textAlign: "center",
@@ -417,6 +520,246 @@ export default function AppMaintenance() {
           </Grid>
         ))}
       </Grid>
+      <Container sx={{ py: 8 }}>
+
+        <Typography
+          variant="h3"
+          sx={{
+            textAlign: "center",
+            fontWeight: "bold",
+            color: colors.darkBlue,
+            mb: 6,
+          }}
+        >
+          Core Maintenance Services
+        </Typography>
+
+        <Grid container spacing={4} justifyContent="center">
+
+          {maintenanceTypes.map((item, index) => (
+
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              md={4}
+              key={index}
+            >
+
+              <Box
+                sx={{
+                  height: "220px",
+
+                  display: "flex",
+                  flexDirection: "column",
+
+                  justifyContent: "center",
+                  alignItems: "center",
+
+                  textAlign: "center",
+
+                  background: "#fff",
+
+                  borderRadius: "20px",
+
+                  padding: 4,
+
+                  boxShadow:
+                    "0 8px 25px rgba(0,0,0,0.08)",
+
+                  transition: "0.3s",
+
+                  "&:hover": {
+                    transform:
+                      "translateY(-8px)",
+
+                    boxShadow:
+                      "0 12px 35px rgba(0,0,0,0.15)",
+                  },
+                }}
+              >
+
+                <Typography
+                  variant="h6"
+                  sx={{
+                    fontWeight: "bold",
+                    color: colors.primary,
+                    mb: 2,
+                  }}
+                >
+                  {item.title}
+                </Typography>
+
+                <Typography
+                  sx={{
+                    color: colors.grey,
+                    lineHeight: 1.8,
+                  }}
+                >
+                  {item.desc}
+                </Typography>
+
+              </Box>
+
+            </Grid>
+
+          ))}
+
+        </Grid>
+
+      </Container>
+      <Container sx={{ py: 6 }}>
+
+        <Typography
+          variant="h3"
+          sx={{
+            textAlign: "center",
+            fontWeight: "bold",
+            color: colors.darkBlue,
+            mb: 5,
+          }}
+        >
+          Frequently Asked Questions
+        </Typography>
+
+        {faqs.map((item, index) => (
+          <Accordion
+            key={index}
+            sx={{
+              mb: 2,
+              borderRadius: "14px !important",
+              overflow: "hidden",
+              boxShadow: 3,
+
+              "&::before": {
+                display: "none",
+              },
+
+              "&:hover": {
+                transform: "translateY(-3px)",
+                transition: "0.3s",
+              },
+            }}
+          >
+
+            <AccordionSummary
+              expandIcon={
+                <ExpandMoreIcon
+                  sx={{
+                    color: colors.primary,
+                  }}
+                />
+              }
+
+              sx={{
+                background:
+                  "linear-gradient(to right,#f8fbff,#eef4ff)",
+
+                "& .MuiAccordionSummary-content": {
+                  margin: "18px 0",
+                },
+              }}
+            >
+
+              <Typography
+                sx={{
+                  fontWeight: "bold",
+                  color: colors.darkBlue,
+                }}
+              >
+                {item.question}
+              </Typography>
+
+            </AccordionSummary>
+
+            <AccordionDetails
+              sx={{
+                background: "#fff",
+              }}
+            >
+
+              <Typography
+                sx={{
+                  color: colors.grey,
+                  lineHeight: 1.8,
+                }}
+              >
+                {item.answer}
+              </Typography>
+
+            </AccordionDetails>
+
+          </Accordion>
+        ))}
+
+      </Container>
+      <Container sx={{ py: 8 }}>
+
+        <Box
+          sx={{
+            textAlign: "center",
+            background:
+              "linear-gradient(135deg,#0B4AA2,#1976d2)",
+            borderRadius: 4,
+            p: { xs: 4, md: 7 },
+            color: "#fff",
+          }}
+        >
+
+          <Typography
+            variant="h4"
+            sx={{
+              fontWeight: "bold",
+              mb: 2,
+            }}
+          >
+            Keep Your Applications Running Smoothly
+          </Typography>
+
+          <Typography
+            sx={{
+              mb: 4,
+              maxWidth: "700px",
+              mx: "auto",
+              opacity: 0.9,
+            }}
+          >
+            Improve performance, reduce downtime, and keep your software secure with our application maintenance and support services.
+          </Typography>
+
+          <Button
+            component={Link}
+            to="/contact"
+            variant="contained"
+            sx={{
+              background: "#fff",
+              color: colors.primary,
+
+              px: 5,
+              py: 1.5,
+
+              fontWeight: "bold",
+
+              borderRadius: "40px",
+
+              fontSize: "16px",
+
+              textTransform: "none",
+
+              boxShadow: 4,
+
+              "&:hover": {
+                background: "#f4f4f4",
+                transform: "translateY(-3px)",
+              },
+            }}
+          >
+            Request Maintenance Support
+          </Button>
+
+        </Box>
+
+      </Container>
     </>
   );
 }

@@ -3854,7 +3854,107 @@ fullContent: (
 
     </Box>
   ),
+},
+{
+  id: 39,
+  title: "Future of IT Services in India: Trends to Watch",
+  date: "June 19, 2026",
+  category: "INFORMATION TECHNOLOGY",
+  image: "/blogs/blog-27.jpeg",
+
+  snippet:
+    "India’s IT services industry continues to evolve through AI, cloud computing, cybersecurity, automation, and digital transformation, shaping the future of business innovation.",
+
+  fullContent: (
+    <Box sx={{ mt: 2 }}>
+
+      <Typography
+        variant="body1"
+        paragraph
+        sx={{ mb: 2, color: colors.black, lineHeight: 1.8 }}
+      >
+        India has established itself as a global leader in Information Technology (IT) services, driving innovation and digital transformation across industries. As businesses increasingly adopt advanced technologies, the IT services sector is evolving rapidly to meet new demands. The future of IT services in India is shaped by emerging technologies, changing business needs, and a growing focus on digital innovation.
+      </Typography>
+
+      <Typography
+        variant="body1"
+        paragraph
+        sx={{ mb: 2, color: colors.black, lineHeight: 1.8 }}
+      >
+        One of the most significant trends is the rise of Artificial Intelligence (AI) and Machine Learning (ML). Businesses are leveraging AI-powered solutions to automate processes, analyze large volumes of data, and enhance decision-making. From intelligent chatbots to predictive analytics, AI is transforming the way organizations operate and serve customers.
+      </Typography>
+
+      <Typography
+        variant="body1"
+        paragraph
+        sx={{ mb: 2, color: colors.black, lineHeight: 1.8 }}
+      >
+        Another major trend is the growing adoption of cloud computing. Businesses are moving away from traditional infrastructure and embracing cloud-based platforms for greater flexibility, scalability, and cost efficiency. Cloud technologies enable organizations to access data securely, support remote work, and deploy applications faster than ever before.
+      </Typography>
+
+      <Typography
+        variant="body1"
+        paragraph
+        sx={{ mb: 2, color: colors.black, lineHeight: 1.8 }}
+      >
+        Cybersecurity is also becoming a top priority. As digital adoption increases, businesses face greater risks from cyber threats and data breaches. IT service providers are focusing on advanced security solutions, vulnerability management, and compliance frameworks to help organizations protect their digital assets and maintain customer trust.
+      </Typography>
+
+      <Typography
+        variant="body1"
+        paragraph
+        sx={{ mb: 2, color: colors.black, lineHeight: 1.8 }}
+      >
+        The demand for custom software development continues to grow as businesses seek solutions tailored to their specific needs. Organizations are investing in custom applications, ERP systems, HRMS platforms, and business automation tools to improve efficiency and gain a competitive advantage in their industries.
+      </Typography>
+
+      <Typography
+        variant="body1"
+        paragraph
+        sx={{ mb: 2, color: colors.black, lineHeight: 1.8 }}
+      >
+        In addition, technologies such as Internet of Things (IoT), automation, data analytics, and low-code development platforms are creating new opportunities for innovation. These technologies enable businesses to optimize operations, improve productivity, and respond more effectively to changing market demands.
+      </Typography>
+
+      <Typography
+        variant="body1"
+        paragraph
+        sx={{ mb: 2, color: colors.black, lineHeight: 1.8 }}
+      >
+        At Rohil Technologies, we stay ahead of industry trends by delivering innovative IT solutions designed for the future. Our expertise includes custom software development, web and mobile application development, cloud integration, ERP and HRMS solutions, business automation, and digital transformation services that help businesses adapt and grow in a technology-driven world.
+      </Typography>
+
+      <Typography
+        variant="body1"
+        paragraph
+        sx={{ mb: 2, color: colors.black, lineHeight: 1.8 }}
+      >
+        The future of IT services in India is defined by innovation, agility, and continuous technological advancement. Businesses that embrace these trends today will be better positioned to improve efficiency, enhance customer experiences, and achieve long-term success in the digital economy.
+      </Typography>
+
+      <Typography
+        variant="body1"
+        paragraph
+        sx={{ mb: 2, color: colors.black, lineHeight: 1.8 }}
+      >
+        At Rohil Technologies, we are committed to helping businesses navigate the future with smart, scalable, and future-ready IT solutions.
+      </Typography>
+
+      <Divider sx={{ my: 2, borderColor: colors.grey }} />
+
+      <Typography
+        variant="body2"
+        sx={{ color: colors.grey, fontStyle: "italic" }}
+      >
+        Keywords: IT Services India, Artificial Intelligence,
+        Cloud Computing, Cybersecurity, Digital Transformation,
+        Business Automation, Rohil Technologies
+      </Typography>
+
+    </Box>
+  ),
 }
+
   ];
 
   return (
