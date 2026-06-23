@@ -1,10 +1,22 @@
 // src/components/BusinessAnalysis.js
 import React from "react";
-import { Box, Typography, Container, Grid, Divider } from "@mui/material";
+import { Grid, Divider } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import {
+  Container,
+  Typography,
+  Box,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+} from "@mui/material";
+
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import colors from "../Colors";
 import { Icon } from "@iconify/react";
-
+import { Helmet } from "react-helmet";
 export default function BusinessAnalysis() {
+  const navigate = useNavigate();
   const whatWeDo = [
     {
       title: "Requirement Gathering",
@@ -94,6 +106,18 @@ export default function BusinessAnalysis() {
 
   return (
     <>
+      <Helmet>
+        <title>Business Analysis Services | Rohil Technologies</title>
+        <meta
+          name="description"
+          content="Professional business analysis services by Rohil Technologies. We help improve business processes, gather requirements, and support digital transformation."
+        />
+        <meta
+          name="keywords"
+          content="Business Analysis Services, Business Process Analysis, Requirement Analysis, Business Consulting, Digital Transformation"
+        />
+        <link rel="canonical" href="https://www.rohiltechnologies.com/business-analysis" />
+      </Helmet>
       {/* ===== Hero Banner ===== */}
       <Box
         sx={{
@@ -111,6 +135,7 @@ export default function BusinessAnalysis() {
       >
         <Box sx={{ position: "relative", zIndex: 2 }}>
           <Typography
+            component="h1"
             variant="h2"
             sx={{
               fontWeight: "bold",
@@ -118,7 +143,7 @@ export default function BusinessAnalysis() {
               fontSize: { xs: "2rem", md: "3rem" },
             }}
           >
-            Business Analysis
+            Business Analysis Services
           </Typography>
         </Box>
         <Box
@@ -140,7 +165,7 @@ export default function BusinessAnalysis() {
           <Box sx={{ flex: 1 }}>
             <img
               src="/images/business1.png"
-              alt="Business Analysis"
+              alt="Business Analysis Services Rohil Technologies requirement gathering process analysis"
               style={{ width: "100%", borderRadius: "12px" }}
             />
           </Box>
@@ -148,7 +173,7 @@ export default function BusinessAnalysis() {
           {/* Right Side - Text */}
           <Box sx={{ flex: 1 }}>
             <Typography
-              variant="h3"
+              variant="h2"
               sx={{ mb: 3, fontWeight: "bold", color: colors.darkBlue }}
             >
               Strategic Business Analysis Services
@@ -419,6 +444,119 @@ export default function BusinessAnalysis() {
             </Grid>
           ))}
         </Grid>
+      </Container>
+      {/* ===== FAQ SECTION ===== */}
+      <Container sx={{ py: 5 }}>
+        <Typography
+          variant="h4"
+          sx={{
+            fontWeight: "bold",
+            textAlign: "center",
+            color: colors.darkBlue,
+            mb: 4,
+          }}
+        >
+          Frequently Asked Questions
+        </Typography>
+
+        <Box sx={{ maxWidth: "900px", mx: "auto" }}>
+          {[
+            {
+              q: "What is business analysis?",
+              a: "Business analysis is the process of identifying business needs and finding solutions to improve efficiency and performance.",
+            },
+            {
+              q: "Why is business analysis important?",
+              a: "It helps organizations improve processes, reduce risks, and make better data-driven decisions.",
+            },
+            {
+              q: "What tools do business analysts use?",
+              a: "Common tools include Jira, Confluence, Figma, Excel, Power BI, and SQL.",
+            },
+            {
+              q: "How does Rohil Technologies help in business analysis?",
+              a: "We provide requirement gathering, process analysis, and digital transformation consulting services.",
+            },
+          ].map((item, i) => (
+            <Accordion
+              key={i}
+              sx={{
+                mb: 2,
+                boxShadow: 2,
+                borderRadius: "10px",
+                "&:before": { display: "none" },
+              }}
+            >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+              >
+                <Typography sx={{ fontWeight: "bold", color: colors.darkBlue }}>
+                  {item.q}
+                </Typography>
+              </AccordionSummary>
+
+              <AccordionDetails>
+                <Typography sx={{ color: colors.grey }}>
+                  {item.a}
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          ))}
+        </Box>
+      </Container>
+      {/* ===== CTA SECTION ===== */}
+      <Container sx={{ py: 5, textAlign: "center" }}>
+        <Typography variant="h4" sx={{ fontWeight: "bold", color: colors.darkBlue }}>
+          Transform Your Business with Expert Analysis
+        </Typography>
+
+        <Typography sx={{ color: colors.grey, mt: 2, mb: 3 }}>
+          Get professional business analysis services to improve efficiency, reduce costs, and scale your operations.
+        </Typography>
+
+        <Box
+          sx={{
+            display: "flex",
+            gap: 2,
+            justifyContent: "center",
+            flexWrap: "wrap",
+          }}
+        >
+          {/* WhatsApp Button */}
+          <Box
+            component="a"
+            href="https://wa.me/919751867879"
+            target="_blank"
+            sx={{
+              px: 3,
+              py: 1.5,
+              bgcolor: colors.primary,
+              color: "#fff",
+              borderRadius: 2,
+              cursor: "pointer",
+              textDecoration: "none",
+              fontWeight: "bold",
+            }}
+          >
+            Request Consultation
+          </Box>
+
+          {/* Contact Page Button */}
+          <Box
+            onClick={() => navigate("/contact")}
+            sx={{
+              px: 3,
+              py: 1.5,
+              border: `1px solid ${colors.primary}`,
+              color: colors.primary,
+              borderRadius: 2,
+              cursor: "pointer",
+              fontWeight: "bold",
+            }}
+          >
+            Contact Us
+          </Box>
+        </Box>
       </Container>
     </>
   );
