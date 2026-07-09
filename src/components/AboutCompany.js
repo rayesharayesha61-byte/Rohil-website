@@ -15,7 +15,7 @@ import TechnicalExpertise from "./technicalSkills";
 import colors from "./Colors";
 import { useNavigate } from "react-router-dom";
 import IndustriesWeServe from "./IndustriesWeServe";
-
+import { Helmet } from "react-helmet-async";
 const steps = [
   {
     number: "01",
@@ -68,8 +68,26 @@ export default function AboutCompany() {
     navigate(route);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-  return (
-    <Box sx={{ bgcolor: "#fff" }}>
+return (
+  <Box sx={{ bgcolor: "#fff" }}>
+    <Helmet>
+      <title>About Rohil Technologies | Trusted Software Company</title>
+
+      <meta
+        name="description"
+        content="Rohil Technologies is a trusted software company offering web development, mobile app development, cloud solutions, and business automation."
+      />
+     <meta property="og:title" content="About Rohil Technologies" />
+<meta property="og:description" content="Trusted software company..." />
+<meta property="og:image" content="https://rohiltechnologies.com/mainPage/about-banner.png" />
+<meta property="og:url" content="https://rohiltechnologies.com/about" />
+      <link
+        rel="canonical"
+        href="https://rohiltechnologies.com/about"
+      />
+    </Helmet>
+
+    {/* Rest of your page */}
       {/* ===== Hero Banner ===== */}
       <Box
         sx={{
@@ -86,16 +104,17 @@ export default function AboutCompany() {
         }}
       >
         <Box sx={{ position: "relative", zIndex: 2 }}>
-          <Typography
-            variant="h2"
-            sx={{
-              fontWeight: "bold",
-              mb: 2,
-              fontSize: { xs: "2rem", md: "3rem" },
-            }}
-          >
-            About US
-          </Typography>
+         <Typography
+  component="h1"
+  variant="h2"
+  sx={{
+    fontWeight: "bold",
+    mb: 2,
+    fontSize: { xs: "2rem", md: "3rem" },
+  }}
+>
+  About Rohil Technologies – Trusted Software Company
+</Typography>
           <Breadcrumbs
             sx={{ justifyContent: "center", display: "flex", color: "#fff" }}
             separator="›"
@@ -271,7 +290,7 @@ export default function AboutCompany() {
 <Box sx={{ bgcolor: "#fff", py: { xs: 3, md: 5 } }}>
   <Container maxWidth="lg" sx={{ px: { xs: 2, md: 4 } }}>
     <Typography
-      variant="h3"
+      variant="h2"
       sx={{
         textAlign: "center",
         fontWeight: "bold",
@@ -355,7 +374,7 @@ export default function AboutCompany() {
       <Box sx={{ py: 6, background: "#fff" }}>
         <Container maxWidth="lg">
           <Divider sx={{ mb: 4 }} />
-          <Typography  variant="h3"
+          <Typography  variant="h2"
             sx={{
               textAlign: "center",
               fontWeight: "bold",
@@ -410,6 +429,43 @@ export default function AboutCompany() {
           </Box>
         </Container>
       </Box>
+      <Box sx={{ py: 6, bgcolor: "#f9fbff" }}>
+  <Container maxWidth="lg">
+
+    <Typography
+      component="h2"
+      variant="h3"
+      sx={{
+        fontWeight: "bold",
+        color: colors.darkBlue,
+        mb: 3,
+      }}
+    >
+      Why Choose Rohil Technologies?
+    </Typography>
+
+    <Typography paragraph>
+      Rohil Technologies is a trusted software company committed to delivering innovative digital solutions that help businesses grow in today's competitive market. We specialize in custom software development, web application development, mobile app development, cloud solutions, and business automation for startups, SMEs, and enterprises.
+    </Typography>
+
+    <Typography paragraph>
+      As experienced mobile app developers, we build secure Android and iOS applications that improve customer engagement and streamline business operations. Our expertise also includes data analytics solutions that transform business data into valuable insights for smarter decision-making.
+    </Typography>
+
+    <Typography paragraph>
+      Our development of software follows industry best practices with a strong focus on quality, security, performance, scalability, and user experience. Every solution is designed to deliver measurable business value and long-term growth.
+    </Typography>
+
+    <Typography paragraph>
+      We simplify cloud computing explained services by helping organizations migrate, deploy, and manage secure cloud infrastructure. Our server based computing solutions provide centralized applications, secure data management, improved collaboration, and reliable system performance.
+    </Typography>
+
+    <Typography paragraph>
+      Driven by innovation, technical excellence, and customer satisfaction, Rohil Technologies continues to be a trusted technology partner delivering future-ready digital transformation solutions for businesses worldwide.
+    </Typography>
+
+  </Container>
+</Box>
       {/* Technical */}
       <TechnicalExpertise />
 
