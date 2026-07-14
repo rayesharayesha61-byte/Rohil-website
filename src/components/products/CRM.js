@@ -1,8 +1,9 @@
 // src/components/CRM.js
 import React from "react";
-import { Box, Typography, Container, Divider } from "@mui/material";
+import { Box, Typography, Container, Divider,Button,Paper,Stack} from "@mui/material";
 import colors from "../Colors";
 import { Icon } from "@iconify/react";
+import { Link } from "react-router-dom";
 
 export default function CRM() {
   // ===== ZigZag Sections for CRM Features =====
@@ -102,10 +103,11 @@ export default function CRM() {
       >
         <Box sx={{ position: "relative", zIndex: 2, px: 2 }}>
           <Typography
+          component="h1"
             variant="h2"
             sx={{ fontWeight: "bold", fontSize: { xs: "2rem", md: "3rem" } }}
           >
-            CRM Software
+            CRM Software Development Services
           </Typography>
         </Box>
       </Box>
@@ -212,6 +214,148 @@ export default function CRM() {
           </Container>
         </Box>
       ))}
+      {/* ===== SEO Content ===== */}
+{/* ===== SEO Content ===== */}
+<Container maxWidth="lg" sx={{ py: 8 }}>
+  <Paper
+    elevation={3}
+    sx={{
+      p: { xs: 3, md: 6 },
+      borderRadius: 4,
+      bgcolor: "#fff",
+    }}
+  >
+    <Typography
+      component="h2"
+      variant="h3"
+      sx={{
+        fontWeight: 700,
+        color: colors.darkBlue,
+        textAlign: "center",
+        mb: 4,
+      }}
+    >
+      CRM Software Development Services
+    </Typography>
+
+    <Typography
+      sx={{
+        color: colors.grey,
+        lineHeight: 2,
+        fontSize: "1.05rem",
+        textAlign: "justify",
+        mb: 2,
+      }}
+    >
+      In today's competitive business environment, CRM software plays a vital
+      role in managing customer relationships, improving sales performance,
+      and streamlining business operations. At <strong>Rohil Technologies</strong>,
+      we provide custom CRM software development services tailored to startups,
+      SMEs, and enterprises.
+    </Typography>
+
+    <Typography
+      sx={{
+        color: colors.grey,
+        lineHeight: 2,
+        fontSize: "1.05rem",
+        textAlign: "justify",
+        mb: 2,
+      }}
+    >
+      Our Customer Relationship Management (CRM) software enables businesses
+      to centralize customer information, automate workflows, monitor sales
+      pipelines, and improve customer engagement with secure cloud-based
+      solutions.
+    </Typography>
+
+    <Typography
+      sx={{
+        color: colors.grey,
+        lineHeight: 2,
+        fontSize: "1.05rem",
+        textAlign: "justify",
+        mb: 2,
+      }}
+    >
+      We develop advanced CRM modules including Lead Management, Sales
+      Management, Customer Support, Marketing Automation, Contact Management,
+      Task Management, Invoice Management, Reporting Dashboard, and Analytics.
+    </Typography>
+
+    <Typography
+      sx={{
+        color: colors.grey,
+        lineHeight: 2,
+        fontSize: "1.05rem",
+        textAlign: "justify",
+      }}
+    >
+      Partner with Rohil Technologies to build secure, scalable, and
+      feature-rich CRM software that improves customer relationships,
+      automates business processes, and accelerates business growth.
+    </Typography>
+
+    {/* Explore Services */}
+    <Paper
+      elevation={0}
+      sx={{
+        mt: 6,
+        p: 4,
+        bgcolor: "#f8fafc",
+        borderRadius: 3,
+        border: "1px solid #e5e7eb",
+      }}
+    >
+      <Typography
+        component="h2"
+        variant="h5"
+        sx={{
+          fontWeight: 700,
+          color: colors.darkBlue,
+          textAlign: "center",
+          mb: 3,
+        }}
+      >
+        Explore Our Services
+      </Typography>
+
+      <Stack
+        direction="row"
+        spacing={2}
+        useFlexGap
+        flexWrap="wrap"
+        justifyContent="center"
+      >
+        <Button component={Link} to="/about" variant="contained">
+          About Us
+        </Button>
+
+        <Button component={Link} to="/services" variant="contained">
+          Services
+        </Button>
+
+        <Button component={Link} to="/web-technologies" variant="contained">
+          Web Development
+        </Button>
+
+        <Button component={Link} to="/mobile" variant="contained">
+          Mobile Apps
+        </Button>
+
+      
+
+        <Button component={Link} to="/blog" variant="contained">
+          Blog
+        </Button>
+
+        <Button component={Link} to="/contact" variant="contained">
+          Contact Us
+        </Button>
+      </Stack>
+    </Paper>
+  </Paper>
+</Container>
     </>
   );
 }
