@@ -284,32 +284,7 @@ const services = [
   sx={{
     px:{xs:2,sm:3,md:0}
   }}>
-    <Typography
-      variant="h3"
-      sx={{
-        textAlign: "center",
-        fontWeight: 700,
-        color: colors.darkBlue,
-        mb: 2,
-        fontSize: { xs: "2rem", md: "3rem" },
-      }}
-    >
-      Explore More Services
-    </Typography>
-
-    <Typography
-      sx={{
-        textAlign: "center",
-        color: colors.grey,
-        maxWidth: 700,
-        mx: "auto",
-        mb: 5,
-        px: 2,
-      }}
-    >
-      Discover our innovative technology solutions designed to help your
-      business grow faster and smarter.
-    </Typography>
+    
 
    <Box
   sx={{
