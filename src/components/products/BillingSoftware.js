@@ -311,9 +311,50 @@ const services = [
       business grow faster and smarter.
     </Typography>
 
-    <Grid container spacing={{xs:2.5,sm:3,md:4}}>
+   <Box
+  sx={{
+    py: { xs: 5, md: 8 },
+    background: "#f8fbff",
+  }}
+>
+  <Container
+    maxWidth="lg"
+    sx={{
+      px: { xs: 2, sm: 3, md: 0 },
+    }}
+  >
+    <Typography
+      variant="h3"
+      sx={{
+        textAlign: "center",
+        fontWeight: 700,
+        color: colors.darkBlue,
+        mb: 2,
+        fontSize: { xs: "2rem", md: "3rem" },
+      }}
+    >
+      Explore More Services
+    </Typography>
+
+    <Typography
+      sx={{
+        textAlign: "center",
+        color: colors.grey,
+        mb: { xs: 4, md: 6 },
+        maxWidth: 700,
+        mx: "auto",
+      }}
+    >
+      Discover our innovative technology solutions designed to help your
+      business grow faster and smarter.
+    </Typography>
+
+    <Grid
+      container
+      spacing={{ xs: 3, sm: 3, md: 4 }}
+    >
       {services.map((item, index) => (
-        <Grid item xs={12} sm={6} lg={3} key={index}>
+        <Grid item xs={12} sm={6} md={3} key={index}>
           <Paper
             component={Link}
             to={item.path}
@@ -322,14 +363,14 @@ const services = [
               textDecoration: "none",
               borderRadius: 4,
               p: 4,
-              height: "100%",
-              mb:{xs:2,sm:0},
+              minHeight: 320,
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "space-between",
               textAlign: "center",
               transition: "0.3s",
+              width: "100%",
               "&:hover": {
                 transform: "translateY(-8px)",
                 boxShadow: 8,
@@ -345,31 +386,32 @@ const services = [
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                mb: 3,
+                mb: 2,
               }}
             >
               <Icon
                 icon={item.icon}
-                width={42}
+                width={40}
                 color={colors.primary}
               />
             </Box>
 
             <Typography
-              variant="h5"
+              variant="h6"
               sx={{
                 fontWeight: 700,
                 color: colors.darkBlue,
-                mb: 2,
+                mb: 1,
               }}
             >
               {item.title}
             </Typography>
 
             <Typography
+              variant="body2"
               sx={{
                 color: colors.grey,
-                mb: 4,
+                mb: 3,
                 flexGrow: 1,
               }}
             >
@@ -381,10 +423,9 @@ const services = [
               to={item.path}
               variant="contained"
               fullWidth
-              endIcon={<Icon icon="mdi:arrow-right" />}
               sx={{
                 borderRadius: "30px",
-                py: 1.3,
+                py: 1.2,
                 textTransform: "none",
                 fontWeight: 600,
                 backgroundColor: colors.primary,
@@ -399,6 +440,8 @@ const services = [
         </Grid>
       ))}
     </Grid>
+  </Container>
+</Box>
   </Container>
 </Box>
 <Box
