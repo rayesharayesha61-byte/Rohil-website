@@ -99,7 +99,7 @@ const services = [
     path: "/web-technologies",
   },
   {
-    title: "Mobile Apps",
+    title: "Mobile App Development",
     description: "Android & iOS app development.",
     icon: "mdi:cellphone",
     path: "/mobile",
@@ -107,12 +107,7 @@ const services = [
  
   
 
-  {
-    title: "Contact Us",
-    description: "Get in touch with our experts.",
-    icon: "mdi:phone-outline",
-    path: "/contact",
-  },
+ 
 ];
   return (
     <>
@@ -279,91 +274,133 @@ const services = [
     productivity and business growth.
   </Typography>
 </Container>
-<Grid container spacing={3}>
-  {services.map((item, index) => (
-    <Grid item xs={12} sm={6} md={3} key={index}>
-      <Paper
-        component={Link}
-        to={item.path}
-        elevation={2}
-        sx={{
-          p: 3,
-          height: 250,
-          borderRadius: 3,
-          textDecoration: "none",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          alignItems: "center",
-          textAlign: "center",
-          transition: "0.3s",
-          border: "1px solid #e5e7eb",
-          "&:hover": {
-            transform: "translateY(-8px)",
-            boxShadow: 8,
-            borderColor: colors.primary,
-          },
-        }}
-      >
-        <Box
-          sx={{
-            width: 70,
-            height: 70,
-            borderRadius: "50%",
-            backgroundColor: "#eef6ff",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Icon
-            icon={item.icon}
-            width={36}
-            color={colors.primary}
-          />
-        </Box>
+<Box
+  sx={{
+    py: { xs: 5, md: 8 },
+    background: "#f8fbff",
+  }}
+>
+  <Container maxWidth="lg"
+  sx={{
+    px:{xs:2,sm:3,md:0}
+  }}>
+    <Typography
+      variant="h3"
+      sx={{
+        textAlign: "center",
+        fontWeight: 700,
+        color: colors.darkBlue,
+        mb: 2,
+        fontSize: { xs: "2rem", md: "3rem" },
+      }}
+    >
+      Explore More Services
+    </Typography>
 
-        <Typography
-          variant="h6"
-          sx={{
-            fontWeight: "bold",
-            color: colors.darkBlue,
-            mt: 2,
-          }}
-        >
-          {item.title}
-        </Typography>
+    <Typography
+      sx={{
+        textAlign: "center",
+        color: colors.grey,
+        maxWidth: 700,
+        mx: "auto",
+        mb: 5,
+        px: 2,
+      }}
+    >
+      Discover our innovative technology solutions designed to help your
+      business grow faster and smarter.
+    </Typography>
 
-        <Typography
-          variant="body2"
-          sx={{
-            color: colors.grey,
-            px: 1,
-            minHeight: 45,
-          }}
-        >
-          {item.description}
-        </Typography>
+    <Grid container spacing={{xs:2.5,sm:3,md:4}}>
+      {services.map((item, index) => (
+        <Grid item xs={12} sm={6} lg={3} key={index}>
+          <Paper
+            component={Link}
+            to={item.path}
+            elevation={3}
+            sx={{
+              textDecoration: "none",
+              borderRadius: 4,
+              p: 4,
+              height: "100%",
+              mb:{xs:2,sm:0},
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "space-between",
+              textAlign: "center",
+              transition: "0.3s",
+              "&:hover": {
+                transform: "translateY(-8px)",
+                boxShadow: 8,
+              },
+            }}
+          >
+            <Box
+              sx={{
+                width: 80,
+                height: 80,
+                borderRadius: "50%",
+                bgcolor: "#eef5ff",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                mb: 3,
+              }}
+            >
+              <Icon
+                icon={item.icon}
+                width={42}
+                color={colors.primary}
+              />
+            </Box>
 
-        <Button
-          variant="contained"
-          endIcon={<Icon icon="mdi:arrow-right" />}
-          sx={{
-            borderRadius: "25px",
-            textTransform: "none",
-            px: 3,
-            backgroundColor: colors.primary,
-            "&:hover": {
-              backgroundColor: colors.darkBlue,
-            },
-          }}
-        >
-          Learn More
-        </Button>
-      </Paper>
+            <Typography
+              variant="h5"
+              sx={{
+                fontWeight: 700,
+                color: colors.darkBlue,
+                mb: 2,
+              }}
+            >
+              {item.title}
+            </Typography>
+
+            <Typography
+              sx={{
+                color: colors.grey,
+                mb: 4,
+                flexGrow: 1,
+              }}
+            >
+              {item.description}
+            </Typography>
+
+            <Button
+              component={Link}
+              to={item.path}
+              variant="contained"
+              fullWidth
+              endIcon={<Icon icon="mdi:arrow-right" />}
+              sx={{
+                borderRadius: "30px",
+                py: 1.3,
+                textTransform: "none",
+                fontWeight: 600,
+                backgroundColor: colors.primary,
+                "&:hover": {
+                  backgroundColor: colors.darkBlue,
+                },
+              }}
+            >
+              Learn More
+            </Button>
+          </Paper>
+        </Grid>
+      ))}
     </Grid>
-  ))}
-</Grid>
+  </Container>
+</Box>
 <Box
   sx={{
     py: 10,
