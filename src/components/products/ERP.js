@@ -1,10 +1,11 @@
 // src/components/ERP.js
 import React from "react";
-import { Box, Typography, Container, Divider } from "@mui/material";
+import { Box, Typography, Container, Divider ,Button} from "@mui/material";
 import colors from "../Colors";
 import { Icon } from "@iconify/react";
-
+ import { useNavigate } from "react-router-dom";
 export default function ERP() {
+  const navigate=useNavigate();
   // ===== ZigZag Sections for ERP Features =====
   const zigZagSections = [
     {
@@ -86,6 +87,8 @@ export default function ERP() {
 
   return (
     <>
+ 
+
       {/* ===== Hero Banner ===== */}
       <Box
         sx={{
@@ -103,11 +106,15 @@ export default function ERP() {
       >
         <Box sx={{ position: "relative", zIndex: 2, px: 2 }}>
           <Typography
-            variant="h2"
-            sx={{ fontWeight: "bold", fontSize: { xs: "2rem", md: "3rem" } }}
-          >
-            ERP
-          </Typography>
+  component="h1"
+  variant="h2"
+  sx={{
+    fontWeight: "bold",
+    fontSize: { xs: "2rem", md: "3rem" },
+  }}
+>
+  Enterprise Resource Planning (ERP) Solutions
+</Typography>
         </Box>
       </Box>
 
@@ -148,6 +155,69 @@ export default function ERP() {
         </Container>
       ))}
 
+   {/* ===== ERP Introduction ===== */}
+<Container sx={{ py: { xs: 5, md: 8 } }}>
+  <Typography
+    component="h1"
+    variant="h3"
+    sx={{
+      fontWeight: 700,
+      color: colors.darkBlue,
+      textAlign: "center",
+      mb: 3,
+      fontSize: { xs: "2rem", md: "2.8rem" },
+    }}
+  >
+    Enterprise Resource Planning (ERP) Solutions
+  </Typography>
+
+  <Typography
+    variant="body1"
+    sx={{
+      color: colors.grey,
+      lineHeight: 1.9,
+      textAlign: "justify",
+      mb: 2,
+    }}
+  >
+    Rohil Technologies provides powerful <strong>Enterprise Resource Planning (ERP) software solutions</strong> designed to simplify business operations and improve productivity. Our custom ERP development services help businesses manage finance, inventory, sales, human resources, procurement, manufacturing, and customer relationships through a single, centralized platform. Whether you are a startup, SME, or large enterprise, our scalable ERP systems are tailored to meet your unique business requirements and support long-term growth.
+  </Typography>
+
+  <Typography
+    variant="body1"
+    sx={{
+      color: colors.grey,
+      lineHeight: 1.9,
+      textAlign: "justify",
+      mb: 2,
+    }}
+  >
+    Our cloud-based ERP solutions and web-based ERP software provide real-time access to business data, enabling faster decision-making and seamless collaboration across departments. With workflow automation, advanced reporting, and secure data management, Rohil Technologies helps organizations reduce operational costs, improve efficiency, and enhance overall business performance.
+  </Typography>
+
+  <Typography
+    variant="body1"
+    sx={{
+      color: colors.grey,
+      lineHeight: 1.9,
+      textAlign: "justify",
+      mb: 2,
+    }}
+  >
+    We specialize in ERP software development, ERP implementation, ERP customization, ERP integration, and ongoing ERP support and maintenance. Our experienced team ensures smooth integration with your existing business applications, delivering reliable, secure, and future-ready ERP solutions that grow alongside your business.
+  </Typography>
+
+  <Typography
+    variant="body1"
+    sx={{
+      color: colors.grey,
+      lineHeight: 1.9,
+      textAlign: "justify",
+    }}
+  >
+    Whether you need an inventory management system, HRMS software, accounting ERP, CRM integration, manufacturing ERP, billing software, or a complete enterprise resource planning solution, Rohil Technologies delivers innovative, scalable, and secure ERP software that accelerates digital transformation and drives long-term business success.
+  </Typography>
+</Container>
       {/* ===== Grid Sections ===== */}
       {gridSections.map((section, idx) => (
         <Box key={idx} sx={{ backgroundColor: colors.lightGrey, py: 8 }}>
@@ -213,6 +283,58 @@ export default function ERP() {
           </Container>
         </Box>
       ))}
+      {/* ===== Call To Action ===== */}
+<Box
+  sx={{
+    py: 8,
+    backgroundColor: colors.darkBlue,
+    color: "#fff",
+    textAlign: "center",
+  }}
+>
+  <Container maxWidth="md">
+    <Typography
+      variant="h3"
+      sx={{
+        fontWeight: 700,
+        mb: 2,
+        fontSize: { xs: "2rem", md: "2.6rem" },
+      }}
+    >
+      Ready to Transform Your Business?
+    </Typography>
+
+    <Typography
+      sx={{
+        mb: 4,
+        lineHeight: 1.8,
+        opacity: 0.9,
+      }}
+    >
+      Partner with Rohil Technologies to implement a secure, scalable, and intelligent ERP solution that streamlines operations, boosts productivity, and supports long-term business growth.
+    </Typography>
+
+   
+<Button
+  variant="contained"
+  size="large"
+  onClick={() => navigate("/contact")}
+  sx={{
+    px: 5,
+    py: 1.5,
+    borderRadius: "30px",
+    fontWeight: 600,
+    background: "#fff",
+    color: colors.darkBlue,
+    "&:hover": {
+      background: "#f5f5f5",
+    },
+  }}
+>
+  Get Free Consultation
+</Button>
+  </Container>
+</Box>
     </>
   );
 }
