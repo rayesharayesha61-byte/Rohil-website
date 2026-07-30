@@ -1,7 +1,9 @@
 import React from "react";
-import { Box, Typography, Container, Grid, Divider } from "@mui/material";
+import { Box, Typography, Container, Grid, Divider,Button} from "@mui/material";
 import colors from "../Colors";
 import { Icon } from "@iconify/react";
+
+import { Link } from "react-router-dom";
 
 export default function BusinessConsulting() {
   const zigZagSections = [
@@ -114,15 +116,60 @@ export default function BusinessConsulting() {
         }}
       >
         <Box sx={{ position: "relative", zIndex: 2 }}>
-          <Typography
-            variant="h2"
-            sx={{ fontWeight: "bold", fontSize: { xs: "2rem", md: "3rem" } }}
-          >
-            Business Consulting
-          </Typography>
+        <Typography
+  component="h1"
+  variant="h2"
+  sx={{
+    fontWeight: "bold",
+    fontSize: { xs: "2rem", md: "3rem" },
+  }}
+>
+  Business Consulting Services Company | Rohil Technologies
+</Typography>
         </Box>
       </Box>
+<Container sx={{ py: 6 }}>
+  <Typography
+    variant="h2"
+    sx={{
+      color: colors.darkBlue,
+      fontWeight: "bold",
+      mb: 3,
+    }}
+  >
+    Professional Business Consulting Services
+  </Typography>
 
+  <Typography sx={{ color: colors.grey, lineHeight: 2 }}>
+    At <strong>Rohil Technologies</strong>, we provide professional
+    <strong> Business Consulting Services</strong> that help startups,
+    SMEs, and enterprises achieve sustainable growth and operational
+    excellence. Our experienced business consultants analyze business
+    challenges, identify growth opportunities, and develop customized
+    strategies that improve productivity, profitability, and long-term
+    success.
+  </Typography>
+
+  <Typography sx={{ color: colors.grey, mt: 3, lineHeight: 2 }}>
+    Our <strong>Business Consulting Company</strong> specializes in
+    strategic planning, business process optimization, digital
+    transformation consulting, market research, business automation,
+    ERP consulting, CRM implementation, cloud transformation,
+    workflow automation, and technology consulting. We help
+    organizations streamline operations, reduce costs, improve
+    efficiency, and implement innovative business solutions that
+    deliver measurable results.
+  </Typography>
+
+  <Typography sx={{ color: colors.grey, mt: 3, lineHeight: 2 }}>
+    Our <strong>Business Strategy Consulting</strong> services focus
+    on improving customer experience, enhancing operational
+    performance, increasing return on investment, and supporting
+    long-term business success. Whether you are a startup or a large
+    enterprise, Rohil Technologies delivers end-to-end consulting
+    solutions tailored to your business goals.
+  </Typography>
+</Container>
       {/* ===== Intro Section ===== */}
       {zigZagSections.map((section, index) => (
         <Container key={index} sx={{ py: 4 }}>
@@ -318,7 +365,83 @@ export default function BusinessConsulting() {
             </Typography>
           </Box>
         </Container>
+          <Box
+  sx={{
+    mt: 8,
+    py: 5,
+    px: 3,
+    borderRadius: 4,
+    background: "linear-gradient(135deg, #f8fbff, #eef6ff)",
+    textAlign: "center",
+    boxShadow: "0 8px 25px rgba(0,0,0,0.08)",
+  }}
+>
+  <Typography
+    component="h2"
+    variant="h4"
+    sx={{
+      fontWeight: "bold",
+      color: colors.darkBlue,
+      mb: 1,
+    }}
+  >
+    Explore Related Services
+  </Typography>
+
+  <Typography
+    sx={{
+      color: colors.grey,
+      mb: 4,
+      maxWidth: 600,
+      mx: "auto",
+    }}
+  >
+    Discover more solutions from Rohil Technologies to accelerate your
+    business growth.
+  </Typography>
+
+  <Box
+    sx={{
+      display: "flex",
+      justifyContent: "center",
+      flexWrap: "wrap",
+      gap: 2,
+    }}
+  >
+    {[
+      { name: "Web Development", link: "/web-technologies" },
+      { name: "Mobile App Development", link: "/mobile" },
+      { name: "Contact Us", link: "/contact" },
+    ].map((item) => (
+      <Button
+        key={item.name}
+        component={Link}
+        to={item.link}
+        variant="outlined"
+        sx={{
+          px: 4,
+          py: 1.5,
+          borderRadius: "50px",
+          textTransform: "none",
+          fontWeight: 600,
+          borderColor: colors.primary,
+          color: colors.primary,
+          transition: "0.3s",
+          "&:hover": {
+            backgroundColor: colors.primary,
+            color: "#fff",
+            transform: "translateY(-4px)",
+            boxShadow: "0 10px 20px rgba(0,0,0,0.15)",
+          },
+        }}
+      >
+        {item.name}
+      </Button>
+    ))}
+  </Box>
+</Box>
       </Box>
+    
     </>
   );
 }

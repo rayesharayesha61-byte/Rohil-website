@@ -108,7 +108,7 @@ export default function BusinessAnalysis() {
       >
         <Box sx={{ position: "relative", zIndex: 2 }}>
           <Typography
-          component="h1"
+            component="h1"
             variant="h2"
             sx={{ fontWeight: "bold", fontSize: { xs: "2rem", md: "3rem" } }}
           >
@@ -158,7 +158,7 @@ export default function BusinessAnalysis() {
       <Container sx={{ py: 4 }}>
         {/* Why Business Analytics Matters */}
         <Typography
-        component="h2"
+          component="h2"
           variant="body1"
           sx={{ fontWeight: "bold", color: colors.darkBlue, mb: 2 }}
         >
@@ -214,32 +214,32 @@ export default function BusinessAnalysis() {
         </Box>
       </Container>
 
-<Container sx={{ py:6 }}>
-    <Typography
-        component="h2"
-        variant="h3"
-        sx={{
-            color:colors.darkBlue,
-            fontWeight:"bold",
-            mb:3,
+      <Container sx={{ py: 6 }}>
+        <Typography
+          component="h2"
+          variant="h3"
+          sx={{
+            color: colors.darkBlue,
+            fontWeight: "bold",
+            mb: 3,
             textAlign: "center",
-        }}
-    >
-        Business Analytics Services
-    </Typography>
+          }}
+        >
+          Business Analytics Services
+        </Typography>
 
-    <Typography sx={{color:colors.grey,mb:2}}>
-        In today's competitive business environment, Business Analytics helps organizations transform raw data into meaningful insights that drive smarter decisions and sustainable growth. Rohil Technologies provides Business Analytics Services and Business Intelligence Solutions that enable businesses to analyze data, identify trends, improve operational efficiency, and achieve better business outcomes.
-    </Typography>
+        <Typography sx={{ color: colors.grey, mb: 2 }}>
+          In today's competitive business environment, Business Analytics helps organizations transform raw data into meaningful insights that drive smarter decisions and sustainable growth. Rohil Technologies provides Business Analytics Services and Business Intelligence Solutions that enable businesses to analyze data, identify trends, improve operational efficiency, and achieve better business outcomes.
+        </Typography>
 
-    <Typography sx={{color:colors.grey,mb:2}}>
-        Our Business Analytics Solutions include interactive dashboards, KPI monitoring, predictive analytics, Power BI dashboards, financial reporting, sales analytics, customer analytics, inventory analytics, and executive reporting.
-    </Typography>
+        <Typography sx={{ color: colors.grey, mb: 2 }}>
+          Our Business Analytics Solutions include interactive dashboards, KPI monitoring, predictive analytics, Power BI dashboards, financial reporting, sales analytics, customer analytics, inventory analytics, and executive reporting.
+        </Typography>
 
-    <Typography sx={{color:colors.grey}}>
-        We integrate analytics solutions with ERP, CRM, accounting software, cloud platforms, and third-party applications to provide a unified business intelligence platform for organizations of all sizes.
-    </Typography>
-</Container>
+        <Typography sx={{ color: colors.grey }}>
+          We integrate analytics solutions with ERP, CRM, accounting software, cloud platforms, and third-party applications to provide a unified business intelligence platform for organizations of all sizes.
+        </Typography>
+      </Container>
       {/* ===== Services Offered ===== */}
       <Container sx={{ py: 4 }}>
         <Typography
@@ -376,179 +376,179 @@ export default function BusinessAnalysis() {
         </Box>
       </Container>
 
-<Container sx={{py:6}}>
-<Typography
-component="h2"
-variant="h3"
-sx={{
-fontWeight:"bold",
-textAlign:"center",
-mb:5
-}}
->
-Industries We Serve
-</Typography>
+      <Container sx={{ py: 6 }}>
+        <Typography
+          component="h2"
+          variant="h3"
+          sx={{
+            fontWeight: "bold",
+            textAlign: "center",
+            mb: 5
+          }}
+        >
+          Industries We Serve
+        </Typography>
 
-<Box
-sx={{
-display:"flex",
-flexWrap:"wrap",
-justifyContent:"center",
-gap:4
-}}
->
-{industries.map((item,index)=>(
-<Box
-key={index}
-sx={{
-width:220,
-textAlign:"center",
-p:3,
-boxShadow:3,
-borderRadius:3
-}}
->
+        <Box
+          sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            gap: 4
+          }}
+        >
+          {industries.map((item, index) => (
+            <Box
+              key={index}
+              sx={{
+                width: 220,
+                textAlign: "center",
+                p: 3,
+                boxShadow: 3,
+                borderRadius: 3
+              }}
+            >
 
-<Icon
-icon={item.icon}
-width={50}
-color={colors.primary}
-/>
+              <Icon
+                icon={item.icon}
+                width={50}
+                color={colors.primary}
+              />
 
-<Typography sx={{mt:2,fontWeight:"bold"}}>
-{item.title}
-</Typography>
+              <Typography sx={{ mt: 2, fontWeight: "bold" }}>
+                {item.title}
+              </Typography>
 
-</Box>
-))}
-</Box>
+            </Box>
+          ))}
+        </Box>
 
-</Container>
-<Container sx={{py:6}}>
-<Typography
-component="h2"
-variant="h3"
-textAlign="center"
-mb={5}
->
-Analytics Tools
-</Typography>
+      </Container>
+      <Container sx={{ py: 6 }}>
+        <Typography
+          component="h2"
+          variant="h3"
+          textAlign="center"
+          mb={5}
+        >
+          Analytics Tools
+        </Typography>
 
-<Box
-sx={{
-display:"flex",
-justifyContent:"center",
-gap:4,
-flexWrap:"wrap"
-}}
->
-{tools.map((tool)=>(
-<Box
-key={tool.title}
-sx={{
-width:180,
-textAlign:"center",
-p:3,
-boxShadow:3,
-borderRadius:3
-}}
->
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            gap: 4,
+            flexWrap: "wrap"
+          }}
+        >
+          {tools.map((tool) => (
+            <Box
+              key={tool.title}
+              sx={{
+                width: 180,
+                textAlign: "center",
+                p: 3,
+                boxShadow: 3,
+                borderRadius: 3
+              }}
+            >
 
-<Icon
-icon={tool.icon}
-width={55}
-color={colors.primary}
-/>
+              <Icon
+                icon={tool.icon}
+                width={55}
+                color={colors.primary}
+              />
 
-<Typography sx={{mt:2}}>
-{tool.title}
-</Typography>
+              <Typography sx={{ mt: 2 }}>
+                {tool.title}
+              </Typography>
 
-</Box>
-))}
-</Box>
+            </Box>
+          ))}
+        </Box>
 
-</Container>
-<Box
-  sx={{
-    mt: 6,
-    py: 5,
-    px: { xs: 2, md: 4 },
-    backgroundColor: "#f8f9fa",
-    borderRadius: 3,
-    textAlign: "center",
-  }}
->
-  <Typography
-    variant="h4"
-    sx={{
-      fontWeight: "bold",
-      color: colors.darkBlue,
-      mb: 3,
-      fontSize: { xs: "1.5rem", md: "2rem" },
-    }}
-  >
-    Explore More Services
-  </Typography>
+      </Container>
+      <Box
+        sx={{
+          mt: 6,
+          py: 5,
+          px: { xs: 2, md: 4 },
+          backgroundColor: "#f8f9fa",
+          borderRadius: 3,
+          textAlign: "center",
+        }}
+      >
+        <Typography
+          variant="h4"
+          sx={{
+            fontWeight: "bold",
+            color: colors.darkBlue,
+            mb: 3,
+            fontSize: { xs: "1.5rem", md: "2rem" },
+          }}
+        >
+          Explore More Services
+        </Typography>
 
-  <Box
-    sx={{
-      display: "flex",
-      flexWrap: "wrap",
-      justifyContent: "center",
-      gap: 2,
-    }}
-  >
-    <Button
-      component={Link}
-      to="/about"
-      variant="outlined"
-      sx={buttonStyle}
-    >
-      About Us
-    </Button>
+        <Box
+          sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            gap: 2,
+          }}
+        >
+          <Button
+            component={Link}
+            to="/about"
+            variant="outlined"
+            sx={buttonStyle}
+          >
+            About Us
+          </Button>
 
-    
 
-    <Button
-      component={Link}
-      to="/erp"
-      variant="outlined"
-      sx={buttonStyle}
-    >
-      ERP Solutions
-    </Button>
 
-    <Button
-      component={Link}
-      to="/crm"
-      variant="outlined"
-      sx={buttonStyle}
-    >
-      CRM Solutions
-    </Button>
+          <Button
+            component={Link}
+            to="/erp"
+            variant="outlined"
+            sx={buttonStyle}
+          >
+            ERP Solutions
+          </Button>
 
-    
+          <Button
+            component={Link}
+            to="/crm"
+            variant="outlined"
+            sx={buttonStyle}
+          >
+            CRM Solutions
+          </Button>
 
-    <Button
-      component={Link}
-      to="/contact"
-      variant="outlined"
-      sx={buttonStyle}
-    >
-      Contact Us
-    </Button>
 
-    <Button
-      component={Link}
-      to="/blog"
-      variant="outlined"
-      sx={buttonStyle}
-    >
-      Blog
-    </Button>
-  </Box>
-</Box>
+
+          <Button
+            component={Link}
+            to="/contact"
+            variant="outlined"
+            sx={buttonStyle}
+          >
+            Contact Us
+          </Button>
+
+          <Button
+            component={Link}
+            to="/blog"
+            variant="outlined"
+            sx={buttonStyle}
+          >
+            Blog
+          </Button>
+        </Box>
+      </Box>
 
     </>
   );
