@@ -124,7 +124,7 @@ export default function DataAnalytics() {
       <Box
         sx={{
           position: "relative",
-          backgroundImage: "url('/service/DataAnalytics.png')",
+          backgroundImage: "url('/service/dataAnalytics.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: { xs: "250px", md: "400px" },
