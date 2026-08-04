@@ -2,7 +2,8 @@ import React from "react";
 import { Box, Typography, Container, Divider } from "@mui/material";
 import colors from "../Colors";
 import { Icon } from "@iconify/react";
-
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 export default function DataAnalytics() {
   const zigZagSections = [
     {
@@ -98,6 +99,27 @@ export default function DataAnalytics() {
 
   return (
     <>
+
+<Helmet>
+  <title>
+    Data Analytics Services | Business Intelligence & Power BI | Rohil Technologies
+  </title>
+
+  <meta
+    name="description"
+    content="Rohil Technologies provides Data Analytics Services, Business Intelligence, Power BI dashboards, KPI reporting, data visualization, predictive analytics, customer analytics, and real-time business reporting to help businesses make smarter decisions."
+  />
+
+  <meta
+    name="keywords"
+    content="Data Analytics Services, Business Intelligence, Power BI, Dashboard Development, Data Visualization, KPI Reporting, Predictive Analytics, Customer Analytics, Business Reporting, Big Data Analytics, Rohil Technologies"
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.rohiltechnologies.com/data-analytics"
+  />
+</Helmet>
       {/* ===== Hero Banner ===== */}
       <Box
         sx={{
@@ -115,14 +137,57 @@ export default function DataAnalytics() {
       >
         <Box sx={{ position: "relative", zIndex: 2 }}>
           <Typography
-            variant="h2"
-            sx={{ fontWeight: "bold", fontSize: { xs: "2rem", md: "3rem" } }}
-          >
-            Data Analytics
-          </Typography>
+  component="h1"
+  variant="h2"
+  sx={{
+    fontWeight: "bold",
+    fontSize: { xs: "2rem", md: "3rem" },
+  }}
+>
+  Data Analytics Services
+</Typography>
         </Box>
       </Box>
+<Box sx={{ py: 6, backgroundColor: "#fff" }}>
+  <Container maxWidth="lg">
+    <Typography
+      variant="h2"
+      sx={{
+        color: colors.darkBlue,
+        fontWeight: "bold",
+        mb: 3,
+      }}
+    >
+      Turn Your Data into Smart Business Decisions
+    </Typography>
 
+    <Typography sx={{ color: colors.grey, mb: 2 }}>
+      At <strong>Rohil Technologies</strong>, we provide professional
+      <strong> Data Analytics Services</strong> that transform raw business
+      data into meaningful insights. Our analytics solutions help businesses
+      improve decision-making, identify trends, optimize operations, and drive
+      sustainable growth.
+    </Typography>
+
+    <Typography sx={{ color: colors.grey, mb: 2 }}>
+      Our expertise includes
+      <strong> Business Intelligence (BI)</strong>,
+      <strong> Power BI Dashboard Development</strong>,
+      <strong> Data Visualization</strong>,
+      <strong> KPI Reporting</strong>,
+      <strong> Sales Analytics</strong>,
+      <strong> Customer Analytics</strong>,
+      <strong> Predictive Analytics</strong>,
+      and
+      <strong> Real-Time Business Reporting</strong>.
+    </Typography>
+
+    <Typography sx={{ color: colors.grey }}>
+      Whether you're a startup, SME, or enterprise, we build scalable and
+      secure data analytics solutions tailored to your business goals.
+    </Typography>
+  </Container>
+</Box>
       {/* ===== Intro Section ===== */}
       {zigZagSections.map((section, index) => (
         <Container key={index} sx={{ py: 4 }}>
@@ -320,6 +385,60 @@ export default function DataAnalytics() {
           </Box>
         </Container>
       </Box>
+      <Box sx={{ mt: 8 }}>
+  <Typography
+    variant="h4"
+    sx={{
+      fontWeight: "bold",
+      color: colors.darkBlue,
+      mb: 4,
+      textAlign: "center",
+    }}
+  >
+    Explore Our Other Services
+  </Typography>
+
+  <Box
+    sx={{
+      display: "flex",
+      flexWrap: "wrap",
+      gap: 3,
+      justifyContent: "center",
+    }}
+  >
+    {[
+      { name: "Software Development", path: "/software-development" },
+      { name: "Web Development", path: "/web-technologies" },
+      { name: "Mobile App Development", path: "/mobile" },
+   
+    ].map((service) => (
+      <Box
+        key={service.name}
+        component={Link}
+        to={service.path}
+        sx={{
+          width: 250,
+          p: 3,
+          textDecoration: "none",
+          borderRadius: 2,
+          bgcolor: "#fff",
+          boxShadow: 2,
+          textAlign: "center",
+          color: colors.darkBlue,
+          fontWeight: "bold",
+          transition: "0.3s",
+          "&:hover": {
+            bgcolor: colors.primary,
+            color: "#fff",
+            transform: "translateY(-5px)",
+          },
+        }}
+      >
+        {service.name}
+      </Box>
+    ))}
+  </Box>
+</Box>
     </>
   );
 }
