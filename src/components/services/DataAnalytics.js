@@ -100,26 +100,7 @@ export default function DataAnalytics() {
   return (
     <>
 
-<Helmet>
-  <title>
-    Data Analytics Services | Business Intelligence & Power BI | Rohil Technologies
-  </title>
 
-  <meta
-    name="description"
-    content="Rohil Technologies provides Data Analytics Services, Business Intelligence, Power BI dashboards, KPI reporting, data visualization, predictive analytics, customer analytics, and real-time business reporting to help businesses make smarter decisions."
-  />
-
-  <meta
-    name="keywords"
-    content="Data Analytics Services, Business Intelligence, Power BI, Dashboard Development, Data Visualization, KPI Reporting, Predictive Analytics, Customer Analytics, Business Reporting, Big Data Analytics, Rohil Technologies"
-  />
-
-  <link
-    rel="canonical"
-    href="https://www.rohiltechnologies.com/data-analytics"
-  />
-</Helmet>
       {/* ===== Hero Banner ===== */}
       <Box
         sx={{
