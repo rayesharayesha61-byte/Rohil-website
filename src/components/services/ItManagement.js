@@ -3,7 +3,8 @@ import React from "react";
 import { Box, Typography, Container, Divider } from "@mui/material";
 import { Icon } from "@iconify/react";
 import colors from "../Colors";
-
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 export default function ItManagement() {
   const services = [
     {
@@ -50,6 +51,32 @@ export default function ItManagement() {
 
   return (
     <>
+
+
+      <Helmet>
+        <title>IT Management Services | Rohil Technologies</title>
+
+        <link
+          rel="canonical"
+          href="https://www.rohiltechnologies.com/it-management"
+        />
+
+        <script type="application/ld+json">
+          {`
+    {
+      "@context":"https://schema.org",
+      "@type":"Service",
+      "name":"IT Management Services",
+      "provider":{
+        "@type":"Organization",
+        "name":"Rohil Technologies"
+      },
+      "serviceType":"IT Management",
+      "areaServed":"Worldwide"
+    }
+    `}
+        </script>
+      </Helmet>
       {/* ===== Hero Banner ===== */}
       <Box
         sx={{
@@ -67,10 +94,15 @@ export default function ItManagement() {
       >
         <Box sx={{ position: "relative", zIndex: 2 }}>
           <Typography
-            variant="h2"
-            sx={{ fontWeight: "bold", fontSize: { xs: "2rem", md: "3rem" } }}
+            component="h1"
+            variant="h3"
+            sx={{
+              fontWeight: "bold",
+              color:"#fff",
+              mb: 3,
+            }}
           >
-            IT Management
+            IT Management Services
           </Typography>
         </Box>
       </Box>
@@ -84,13 +116,30 @@ export default function ItManagement() {
           IT MANAGEMENT
         </Typography>
         <Typography sx={{ color: colors.grey, mb: 2 }}>
-          An organization’s IT system and management ensure fluent company-wide
-          communication and coordination, rapid recovery, and minimal downtime
-          during unforeseen emergencies such as natural disasters or cyber
-          attacks. This helps increase productivity, improve customer service,
-          and support business growth seamlessly.
-        </Typography>
+          At <strong>Rohil Technologies</strong>, we provide professional
+          <strong> IT Management Services</strong> that help businesses improve
+          productivity, strengthen cybersecurity, and simplify daily IT operations.
+          Our experienced IT professionals deliver end-to-end technology solutions,
+          ensuring your IT infrastructure remains secure, reliable, and up to date.
+          We support startups, small businesses, and enterprises by managing their
+          complete IT environment while allowing them to focus on business growth.
 
+          <br /><br />
+
+          Our IT management solutions include network management, server monitoring,
+          cloud management, infrastructure support, software installation, data
+          backup, disaster recovery, cybersecurity, and 24/7 technical support.
+          Through proactive monitoring and preventive maintenance, we minimize
+          downtime, improve performance, and keep your business running efficiently.
+
+          <br /><br />
+
+          We also help organizations with IT consulting, digital transformation,
+          cloud migration, infrastructure optimization, and hybrid IT environments.
+          Our scalable and cost-effective solutions are designed to meet the evolving
+          needs of modern businesses while ensuring security, performance, and
+          business continuity.
+        </Typography>
         <Divider sx={{ my: 5 }} />
 
         {/* Why IT Management Essential */}
@@ -220,7 +269,43 @@ export default function ItManagement() {
           performance, empowering businesses to stay focused on innovation and
           growth.
         </Typography>
+        <Divider sx={{ my: 5 }} />
+
+        <Typography
+          component="h2"
+          variant="h4"
+          sx={{
+            fontWeight: "bold",
+            color: colors.darkBlue,
+            mb: 2,
+          }}
+        >
+          Why Choose Rohil Technologies for IT Management Services?
+        </Typography>
+
+        <Typography sx={{ color: colors.grey }}>
+          Rohil Technologies delivers reliable and scalable IT Management Services
+          tailored to organizations of every size. Our certified professionals
+          proactively monitor IT infrastructure, optimize cloud resources, strengthen
+          cybersecurity, and provide continuous technical support. We focus on
+          minimizing downtime, improving operational efficiency, protecting business
+          data, and ensuring long-term business continuity. Whether your organization
+          operates on-premise, in the cloud, or in a hybrid environment, we provide
+          customized IT solutions that help your business remain secure, productive,
+          and competitive.
+        </Typography>
+        <Typography sx={{ color: colors.grey, mt: 3 }}>
+        Rohil Technologies offers a wide range of IT solutions to help businesses
+        achieve digital success. Explore our <Link to="/software-development">Software Development</Link>,
+        <Link to="/web-technologies"> Web Development</Link>,
+        <Link to="/mobile"> Mobile App Development</Link>,
+        <Link to="/application-maintenance">App Maintenance</Link> services. You can also
+        visit our <Link to="/about">About Us</Link> page to learn more about our
+        expertise or <Link to="/contact">Contact Us</Link> to discuss your IT
+        requirements with our team.
+      </Typography>
       </Container>
+      
     </>
   );
 }
