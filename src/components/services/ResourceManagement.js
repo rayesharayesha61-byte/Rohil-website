@@ -218,6 +218,99 @@ export default function ResourceManagement() {
           businesses make smarter allocation decisions and achieve operational
           excellence across teams and projects.
         </Typography>
+        {/* Additional SEO Content */}
+<Typography
+  variant="h4"
+  sx={{ fontWeight: "bold", color: colors.darkBlue, mb: 2, mt: 5 }}
+>
+  Resource Management Services
+</Typography>
+
+<Typography sx={{ color: colors.grey, mb: 3 }}>
+  Efficient resource management helps businesses make the best use of their
+  people, time, technology, and other valuable resources. Rohil Technologies
+  provides smart resource management solutions that help organizations improve
+  productivity, reduce resource wastage, and manage projects more effectively.
+</Typography>
+
+<Typography
+  variant="h4"
+  sx={{ fontWeight: "bold", color: colors.darkBlue, mb: 2 }}
+>
+  Streamline Your Resources
+</Typography>
+
+<Typography sx={{ color: colors.grey, mb: 3 }}>
+  Our resource management solutions help businesses plan, allocate, and monitor
+  resources based on project requirements. From workforce planning to
+  technology and operational resources, we help organizations maintain better
+  visibility and make informed decisions.
+</Typography>
+
+<Typography
+  variant="h4"
+  sx={{ fontWeight: "bold", color: colors.darkBlue, mb: 2 }}
+>
+  Key Features
+</Typography>
+
+<Box component="ul" sx={{ color: colors.grey, mb: 3 }}>
+  <li>Resource planning and allocation</li>
+  <li>Workforce management</li>
+  <li>Project resource tracking</li>
+  <li>Capacity and availability management</li>
+  <li>Task and workload monitoring</li>
+  <li>Resource utilization analysis</li>
+  <li>Performance tracking and reporting</li>
+  <li>Real-time resource visibility</li>
+</Box>
+
+<Typography
+  variant="h4"
+  sx={{ fontWeight: "bold", color: colors.darkBlue, mb: 2 }}
+>
+  Improve Productivity and Efficiency
+</Typography>
+
+<Typography sx={{ color: colors.grey, mb: 3 }}>
+  Effective resource planning ensures that the right resources are available
+  at the right time. Our solutions help teams identify resource gaps, avoid
+  over-allocation, balance workloads, and improve overall project efficiency.
+</Typography>
+
+<Typography
+  variant="h4"
+  sx={{ fontWeight: "bold", color: colors.darkBlue, mb: 2 }}
+>
+  Data-Driven Resource Planning
+</Typography>
+
+<Typography sx={{ color: colors.grey, mb: 3 }}>
+  With centralized resource information and clear reporting, businesses can
+  understand resource utilization and make better operational decisions. Our
+  technology-driven approach supports efficient planning while helping
+  organizations adapt to changing project demands.
+</Typography>
+
+<Typography
+  variant="h4"
+  sx={{ fontWeight: "bold", color: colors.darkBlue, mb: 2 }}
+>
+  Why Choose Rohil Technologies?
+</Typography>
+
+<Typography sx={{ color: colors.grey, mb: 3 }}>
+  Rohil Technologies combines technology expertise with practical business
+  requirements to deliver scalable resource management solutions. We focus on
+  creating solutions that are easy to manage, flexible to business needs, and
+  capable of supporting long-term growth.
+</Typography>
+
+<Typography sx={{ color: colors.grey, mb: 3 }}>
+  Whether you need better workforce planning, project resource management, or
+  improved resource utilization, Rohil Technologies can help you build a more
+  organized and productive operation.
+</Typography>
       </Container>
     </>
   );
