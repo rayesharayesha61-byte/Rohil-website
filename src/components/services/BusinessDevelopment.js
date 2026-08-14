@@ -55,12 +55,22 @@ export default function BusinessDevelopment() {
 
   return (
     <>
-      <Helmet>
-        <title>Business Development Services | Rohil Technologies</title>
-        <meta name="description" content="Drive business growth with Rohil Technologies’ expert business development services including market expansion, lead generation, partnerships, digital growth, and strategic consulting." />
-        <link rel="canonical" href="https://www.rohiltechnologies.com/business/business-development" />
-      </Helmet>
+     
 
+
+<Helmet>
+  <title>Business Development Services | Rohil Technologies</title>
+
+  <meta
+    name="description"
+    content="Rohil Technologies provides Business Development Services including lead generation, market research, B2B business development, strategic partnerships, sales strategy, and business expansion solutions."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.rohiltechnologies.com/business/business-development"
+  />
+</Helmet>
       {/* ===== Hero Banner ===== */}
       <Box
         sx={{
