@@ -431,48 +431,82 @@ export default function EmailMarketing() {
       Our Email Marketing Approach
     </Typography>
 
-    <Grid container spacing={3}>
-      {[
-        "Understand your business goals and target audience",
-        "Develop a suitable email marketing strategy",
-        "Create engaging and relevant email content",
-        "Segment audiences for better targeting",
-        "Set up automated customer journeys",
-        "Monitor campaign performance",
-        "Analyze engagement and conversion data",
-        "Continuously improve future campaigns",
-      ].map((item, index) => (
-        <Grid item xs={12} sm={6} md={3} key={index}>
-          <Box
-            sx={{
-              backgroundColor: "#fff",
-              p: 3,
-              borderRadius: 2,
-              height: "100%",
-              boxShadow: 1,
-            }}
-          >
-            <Icon
-              icon="mdi:check-circle-outline"
-              width={30}
-              height={30}
-              color={colors.primary}
-            />
+    <Grid container spacing={2}>
+  {[
+    "Understand your business goals and target audience",
+    "Develop a suitable email marketing strategy",
+    "Create engaging and relevant email content",
+    "Segment audiences for better targeting",
+    "Set up automated customer journeys",
+    "Monitor campaign performance",
+    "Analyze engagement and conversion data",
+    "Continuously improve future campaigns",
+  ].map((item, index) => (
+    <Grid
+      item
+      xs={6}
+      sm={6}
+      md={3}
+      key={index}
+      sx={{
+        display: "flex",
+      }}
+    >
+      <Box
+        sx={{
+          width: "100%",
+          minHeight: {
+            xs: "180px",
+            sm: "190px",
+            md: "210px",
+          },
+          backgroundColor: "#fff",
+          p: {
+            xs: 2,
+            sm: 3,
+          },
+          borderRadius: 2,
+          boxShadow: 1,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          textAlign: "center",
+          boxSizing: "border-box",
 
-            <Typography
-              component="h3"
-              sx={{
-                mt: 2,
-                fontWeight: "bold",
-                color: colors.darkBlue,
-              }}
-            >
-              {item}
-            </Typography>
-          </Box>
-        </Grid>
-      ))}
+          "&:hover": {
+            transform: "translateY(-4px)",
+            boxShadow: 3,
+          },
+        }}
+      >
+        <Icon
+          icon="mdi:check-circle-outline"
+          width={32}
+          height={32}
+          color={colors.primary}
+        />
+
+        <Typography
+          component="h3"
+          sx={{
+            mt: 2,
+            fontWeight: "bold",
+            color: colors.darkBlue,
+            fontSize: {
+              xs: "0.85rem",
+              sm: "0.95rem",
+              md: "1rem",
+            },
+            lineHeight: 1.4,
+          }}
+        >
+          {item}
+        </Typography>
+      </Box>
     </Grid>
+  ))}
+</Grid>
   </Container>
 </Box>
 <Container sx={{ py: 8 }}>
