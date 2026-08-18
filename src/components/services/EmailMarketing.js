@@ -112,14 +112,28 @@ export default function EmailMarketing() {
 
   return (
     <>
-      <Helmet>
-        <title>Email Marketing Services | Rohil Technologies</title>
-        <meta name="description" content="Professional email marketing services by Rohil Technologies. Increase customer engagement, lead generation, and conversions with targeted email campaigns." />
-        <link rel="canonical" href="https://www.rohiltechnologies.com/business/email-marketing" />
-        <script type="application/ld+json">
-          {JSON.stringify(schemaData)}
-        </script>
-      </Helmet>
+    <Helmet>
+  <title>Email Marketing Services | Rohil Technologies</title>
+
+  <meta
+    name="description"
+    content="Rohil Technologies provides result-driven email marketing services to help businesses engage customers, generate leads, and increase conversions."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.rohiltechnologies.com/business/email-marketing"
+  />
+
+  <meta
+    name="robots"
+    content="index, follow"
+  />
+
+  <script type="application/ld+json">
+    {JSON.stringify(schemaData)}
+  </script>
+</Helmet>
 
       {/* ===== Hero Section ===== */}
       <Box
@@ -166,7 +180,52 @@ export default function EmailMarketing() {
           </Button>
         </Box>
       </Box>
+<Container sx={{ py: 7, textAlign: "center" }}>
+  <Typography
+    variant="h2"
+    component="h2"
+    sx={{
+      fontWeight: "bold",
+      color: colors.darkBlue,
+      mb: 3,
+      fontSize: { xs: "2rem", md: "2.5rem" },
+    }}
+  >
+    Professional Email Marketing Solutions
+  </Typography>
 
+  <Typography
+    sx={{
+      color: colors.grey,
+      maxWidth: "850px",
+      mx: "auto",
+      fontSize: "1.1rem",
+      lineHeight: 1.8,
+    }}
+  >
+    Connect with your audience, build lasting relationships, and drive
+    measurable business growth with professional email marketing services
+    from Rohil Technologies. We help businesses create meaningful email
+    campaigns that reach the right audience with relevant and engaging
+    messages.
+  </Typography>
+
+  <Typography
+    sx={{
+      color: colors.grey,
+      maxWidth: "850px",
+      mx: "auto",
+      mt: 3,
+      fontSize: "1.1rem",
+      lineHeight: 1.8,
+    }}
+  >
+    Our customized email marketing strategies are designed around your
+    business goals, target audience, and customer journey. From campaign
+    planning and content creation to automation and performance tracking,
+    we manage the complete email marketing process.
+  </Typography>
+</Container>
       {/* ===== Overview Section ===== */}
       <Container sx={{ py: 6, textAlign: "center" }}>
         <Typography variant="h2" sx={{ fontWeight: "bold", color: colors.darkBlue, mb: 3, fontSize: "2.5rem" }}>
@@ -357,7 +416,231 @@ export default function EmailMarketing() {
       </Container>
 
       <Divider />
+<Box sx={{ backgroundColor: colors.lightGrey, py: 8 }}>
+  <Container>
+    <Typography
+      variant="h2"
+      component="h2"
+      sx={{
+        textAlign: "center",
+        fontWeight: "bold",
+        color: colors.darkBlue,
+        mb: 5,
+      }}
+    >
+      Our Email Marketing Approach
+    </Typography>
 
+    <Grid container spacing={3}>
+      {[
+        "Understand your business goals and target audience",
+        "Develop a suitable email marketing strategy",
+        "Create engaging and relevant email content",
+        "Segment audiences for better targeting",
+        "Set up automated customer journeys",
+        "Monitor campaign performance",
+        "Analyze engagement and conversion data",
+        "Continuously improve future campaigns",
+      ].map((item, index) => (
+        <Grid item xs={12} sm={6} md={3} key={index}>
+          <Box
+            sx={{
+              backgroundColor: "#fff",
+              p: 3,
+              borderRadius: 2,
+              height: "100%",
+              boxShadow: 1,
+            }}
+          >
+            <Icon
+              icon="mdi:check-circle-outline"
+              width={30}
+              height={30}
+              color={colors.primary}
+            />
+
+            <Typography
+              component="h3"
+              sx={{
+                mt: 2,
+                fontWeight: "bold",
+                color: colors.darkBlue,
+              }}
+            >
+              {item}
+            </Typography>
+          </Box>
+        </Grid>
+      ))}
+    </Grid>
+  </Container>
+</Box>
+<Container sx={{ py: 8 }}>
+  <Typography
+    variant="h2"
+    component="h2"
+    sx={{
+      textAlign: "center",
+      fontWeight: "bold",
+      color: colors.darkBlue,
+      mb: 3,
+      fontSize: { xs: "2rem", md: "2.5rem" },
+    }}
+  >
+    Benefits of Email Marketing
+  </Typography>
+
+  <Typography
+    sx={{
+      textAlign: "center",
+      maxWidth: "850px",
+      mx: "auto",
+      color: colors.grey,
+      lineHeight: 1.8,
+      mb: 5,
+      px: { xs: 1, md: 0 },
+    }}
+  >
+    A well-planned email strategy can help businesses maintain regular
+    customer communication while supporting long-term growth. It can
+    improve customer engagement, strengthen brand relationships, generate
+    qualified leads, promote products or services, and encourage repeat
+    business.
+  </Typography>
+
+ <Grid container spacing={2}>
+  {[
+    {
+      title: "Better Customer Engagement",
+      icon: "mdi:account-group-outline",
+    },
+    {
+        title: "Lead Generation",
+        icon: "mdi:account-arrow-right-outline",
+      },
+    {
+      title: "Customer Retention",
+      icon: "mdi:account-heart-outline",
+    },
+    {
+      title: "Increased Conversions",
+      icon: "mdi:chart-line",
+    },
+  ].map((benefit, index) => (
+    <Grid item xs={6} sm={6} md={3} key={index}>
+      <Box
+        sx={{
+          width: "100%",
+          minHeight: { xs: "145px", sm: "170px", md: "190px" },
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          textAlign: "center",
+          p: { xs: 2, sm: 3 },
+          borderRadius: 3,
+          backgroundColor: "#fff",
+          boxShadow: 2,
+          boxSizing: "border-box",
+
+          "&:hover": {
+            transform: "translateY(-4px)",
+            boxShadow: 5,
+          },
+        }}
+      >
+        <Icon
+          icon={benefit.icon}
+          width={35}
+          height={35}
+          color={colors.primary}
+        />
+
+        <Typography
+          component="h3"
+          sx={{
+            mt: 1.5,
+            fontWeight: "bold",
+            color: colors.darkBlue,
+            fontSize: {
+              xs: "0.85rem",
+              sm: "1rem",
+              md: "1.1rem",
+            },
+            lineHeight: 1.4,
+          }}
+        >
+          {benefit.title}
+        </Typography>
+      </Box>
+    </Grid>
+  ))}
+</Grid>
+</Container>
+<Box sx={{ backgroundColor: colors.lightGrey, py: 8 }}>
+  <Container sx={{ textAlign: "center" }}>
+    <Typography
+      variant="h3"
+      component="h2"
+      sx={{
+        fontWeight: "bold",
+        color: colors.darkBlue,
+        mb: 3,
+      }}
+    >
+      Grow Your Business with Smarter Email Communication
+    </Typography>
+
+    <Typography
+      sx={{
+        maxWidth: "850px",
+        mx: "auto",
+        color: colors.grey,
+        lineHeight: 1.8,
+        fontSize: "1.1rem",
+      }}
+    >
+      Whether you are looking to improve customer engagement, nurture leads,
+      promote your services, or build a stronger digital presence, Rohil
+      Technologies can help you develop an effective email marketing
+      strategy.
+    </Typography>
+
+    <Typography
+      sx={{
+        maxWidth: "850px",
+        mx: "auto",
+        mt: 2,
+        color: colors.grey,
+        lineHeight: 1.8,
+        fontSize: "1.1rem",
+      }}
+    >
+      Partner with Rohil Technologies for customized email marketing
+      solutions designed around your business objectives and audience.
+      Let us help you turn email communication into a valuable channel for
+      sustainable business growth.
+    </Typography>
+
+    <Button
+      variant="contained"
+      component={Link}
+      to="/contact"
+      sx={{
+        mt: 4,
+        backgroundColor: colors.primary,
+        "&:hover": {
+          backgroundColor: colors.darkBlue,
+        },
+        fontWeight: "bold",
+        px: 5,
+        py: 1.5,
+      }}
+    >
+      Get Started With Email Marketing
+    </Button>
+  </Container>
+</Box>
       {/* ===== Internal Linking ===== */}
       <Container sx={{ py: 6 }}>
         <Typography variant="h4" sx={{ fontWeight: "bold", color: colors.darkBlue, mb: 4, fontSize: "1.8rem" }}>
