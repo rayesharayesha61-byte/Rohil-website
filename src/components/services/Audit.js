@@ -521,35 +521,7 @@ export default function Audit() {
             technically sound, user-friendly, and search-engine ready.
           </Typography>
 
-        
-
-          <Box sx={{ mb: 5 }}>
-            <Typography sx={{ mb: 1 }}>
-              <a href="/web-technologies">
-                Web Development Services
-              </a>
-            </Typography>
-
-            <Typography sx={{ mb: 1 }}>
-              <a href="/mobile">
-                Mobile App Development Services
-              </a>
-            </Typography>
-
-            <Typography sx={{ mb: 1 }}>
-              <a href="/software-development">
-                Software Development Services
-              </a>
-            </Typography>
-
-           
-
-            <Typography>
-              <a href="/contact">
-                Contact Rohil Technologies
-              </a>
-            </Typography>
-          </Box>
+          
 
           {/* ================= GET AUDIT ================= */}
 
