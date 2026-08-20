@@ -521,20 +521,7 @@ export default function Audit() {
             technically sound, user-friendly, and search-engine ready.
           </Typography>
 
-          {/* ================= INTERNAL LINKS ================= */}
-
-          <Typography
-            variant="h2"
-            component="h2"
-            sx={{
-              fontWeight: "bold",
-              color: colors.darkBlue,
-              mb: 3,
-              fontSize: { xs: "28px", md: "36px" },
-            }}
-          >
-            Explore Our Technology Services
-          </Typography>
+        
 
           <Box sx={{ mb: 5 }}>
             <Typography sx={{ mb: 1 }}>
