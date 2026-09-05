@@ -134,57 +134,64 @@ export default function ApplicationDev() {
   return (
     <>
       <Helmet>
-        <title>Application Development Services | Rohil Technologies</title>
+  <title>Application Development Services | Rohil Technologies</title>
 
-        <meta
-          name="description"
-          content="Professional application development services by Rohil Technologies. We build scalable, secure, and custom software applications for businesses."
-        />
+  <meta
+    name="description"
+    content="Rohil Technologies provides custom application development services for startups, small businesses, and enterprises. We build secure, scalable, and user-friendly applications."
+  />
 
-        <meta
-          name="keywords"
-          content="Application Development Services, Custom Application Development, Software Application Development, Enterprise Application Development"
-        />
+  <meta
+    name="keywords"
+    content="Application Development Services, Custom Application Development, Web Application Development, Mobile App Development, Enterprise Application Development"
+  />
 
-        <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow" />
 
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="Application Development Services | Rohil Technologies"
-        />
-        <meta
-          property="og:description"
-          content="Custom application development solutions for businesses."
-        />
-        <meta
-          property="og:url"
-          content="https://www.rohiltechnologies.com/application-development"
-        />
-        <meta
-          property="og:image"
-          content="https://www.rohiltechnologies.com/images/appdev.png"
-        />
+  <link
+    rel="canonical"
+    href="https://www.rohiltechnologies.com/application-development"
+  />
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Application Development Services | Rohil Technologies"
-        />
-        <meta
-          name="twitter:description"
-          content="Scalable and secure application development services."
-        />
-        <meta
-          name="twitter:image"
-          content="https://www.rohiltechnologies.com/images/appdev.png"
-        />
+  <meta
+    property="og:title"
+    content="Application Development Services | Rohil Technologies"
+  />
 
-        <link
-          rel="canonical"
-          href="https://www.rohiltechnologies.com/application-development"
-        />
-      </Helmet>
+  <meta
+    property="og:description"
+    content="Custom application development services for startups, small businesses, and enterprises."
+  />
+
+  <meta
+    property="og:url"
+    content="https://www.rohiltechnologies.com/application-development"
+  />
+
+  <meta
+    property="og:image"
+    content="https://www.rohiltechnologies.com/images/appdev.png"
+  />
+
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: "Application Development Services",
+      serviceType: "Application Development",
+      description:
+        "Rohil Technologies provides custom application development services for startups, small businesses, and enterprises.",
+      provider: {
+        "@type": "Organization",
+        name: "Rohil Technologies",
+        url: "https://www.rohiltechnologies.com/",
+      },
+      url: "https://www.rohiltechnologies.com/application-development",
+    })}
+  </script>
+</Helmet>
       {/* ===== Hero Banner ===== */}
       <Box
         sx={{
