@@ -130,58 +130,55 @@ a:"Yes, we develop integrations for ERP, CRM, APIs and third-party platforms."
   return (
     <>
       <Helmet>
-        <title>
-          Software Development Services | Rohil Technologies
-        </title>
+  <title>Software Development Services | Rohil Technologies</title>
 
-        <meta
-          name="description"
-          content="Custom software development services by Rohil Technologies. Build scalable, secure, and innovative software solutions tailored to your business."
-        />
+  <meta
+    name="description"
+    content="Rohil Technologies provides custom software development services, web and mobile apps, cloud solutions, and scalable digital solutions for businesses."
+  />
 
-        <meta
-          name="keywords"
-          content="
-Software Development Services,
-Custom Software Development,
-Enterprise Software Development,
-Software Development Company,
-Business Software Solutions
-"
-        />
+  <meta
+    name="keywords"
+    content="Software Development Services, Custom Software Development, Enterprise Software Development, Web Application Development, Mobile App Development, Cloud Solutions, Software Development Company"
+  />
 
-        <link
-          rel="canonical"
-          href="https://www.rohiltechnologies.com/software-development"
-        />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "Service",
-                "name": "Software Development Services",
-                "provider": {
-                  "@type": "Organization",
-                  "name": "Rohil Technologies"
-                }
-              },
-              {
-                "@type": "FAQPage",
-                "mainEntity":
-                  faq.map(item => ({
-                    "@type": "Question",
-                    "name": item.q,
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": item.a
-                    }
-                  }))
-              }
-            ]
-          })}
-        </script>
-      </Helmet>
+  <link
+    rel="canonical"
+    href="https://www.rohiltechnologies.com/software-development"
+  />
+
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "Software Development Services",
+          "description":
+            "Rohil Technologies provides custom software development services, web and mobile apps, cloud solutions, and scalable digital solutions for businesses.",
+          "provider": {
+            "@type": "Organization",
+            "name": "Rohil Technologies",
+            "url": "https://www.rohiltechnologies.com/"
+          },
+          "url":
+            "https://www.rohiltechnologies.com/software-development"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": faq.map((item) => ({
+            "@type": "Question",
+            "name": item.q,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": item.a
+            }
+          }))
+        }
+      ]
+    })}
+  </script>
+</Helmet>
       {/* ===== Hero Banner ===== */}
       <Box
         sx={{
@@ -199,15 +196,15 @@ Business Software Solutions
       >
         <Box sx={{ position: "relative", zIndex: 2 }}>
           <Typography
-            variant="h1"
-            sx={{
-              fontWeight: "bold",
-              mb: 2,
-              fontSize: { xs: "2rem", md: "3rem" },
-            }}
-          >
-            Software Development Services
-          </Typography>
+  variant="h1"
+  sx={{
+    fontWeight: "bold",
+    mb: 2,
+    fontSize: { xs: "2rem", md: "3rem" },
+  }}
+>
+  Software Development Services
+</Typography>
         </Box>
         <Box
           sx={{ position: "absolute", inset: 0, bgcolor: "rgba(0,0,0,0.5)" }}
@@ -241,24 +238,29 @@ Business Software Solutions
           }}
         >
           <Box sx={{ flex: 1 }}>
-            <img
-              src="/images/softdev1.png"
-              loading="lazy"
-              alt="Custom software development services"
-              style={{
-                width: "100%",
-                borderRadius: "12px"
-              }}
-            />
+           <img
+  src="/images/softdev1.png"
+  loading="lazy"
+  alt="Custom software development services by Rohil Technologies"
+  style={{
+    width: "100%",
+    borderRadius: "12px"
+  }}
+/>
           </Box>
 
           <Box sx={{ flex: 1 }}>
             <Typography
-              variant="h2"
-              sx={{ mb: 3, fontWeight: "bold", color: colors.darkBlue }}
-            >
-              Custom Software Solutions
-            </Typography>
+  component="h2"
+  variant="h2"
+  sx={{
+    mb: 3,
+    fontWeight: "bold",
+    color: colors.darkBlue,
+  }}
+>
+  Custom Software Development Solutions
+</Typography>
             <Typography sx={{ color: colors.grey, mb: 2 }}>
               We create robust, scalable, and secure software solutions for
               businesses of all sizes. From web and desktop applications to
@@ -305,10 +307,14 @@ Business Software Solutions
 
           <Box sx={{ flex: 1 }}>
             <img
-              src="/images/softdev2.png"
-            alt="Custom software development services"
-              style={{ width: "80%", borderRadius: "12px" }}
-            />
+  src="/images/softdev2.png"
+  loading="lazy"
+  alt="Scalable software solutions by Rohil Technologies"
+  style={{
+    width: "80%",
+    borderRadius: "12px"
+  }}
+/>
           </Box>
         </Box>
       </Container>
