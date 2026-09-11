@@ -144,6 +144,37 @@ const jobOpenings = [
       "Virudunagar (Candidates from Virudunagar and surrounding areas only)",
     apply: "Send your resume to admin@rohiltechnologies.com",
   },
+  {
+  title: "Software Developer",
+  positions: 1,
+  image: "/images/software-developer.jpg",
+
+  requirements: [
+    "Minimum 2+ years of experience in software development",
+    "Strong knowledge of React Native",
+    "Strong knowledge of Node.js",
+    "Experience with MongoDB",
+    "Good problem-solving and communication skills",
+  ],
+
+  benefits: [
+    "Attractive salary package",
+    "Career growth and learning opportunities",
+    "Opportunity to work on real-time projects",
+  ],
+
+  responsibilities: [
+    "Develop and maintain software applications",
+    "Build mobile applications using React Native",
+    "Develop backend services using Node.js",
+    "Work with MongoDB for database management",
+    "Collaborate with the development team",
+  ],
+
+  experience: "2+ Years",
+  location: "Virudhunagar (Candidates from nearby areas preferred)",
+  apply: "Send your resume to admin@rohiltechnologies.com",
+},
 ];
 
 export default function Careers() {
@@ -230,6 +261,20 @@ export default function Careers() {
                   "&:hover": { boxShadow: "0 12px 32px rgba(0,0,0,0.15)" },
                 }}
               >
+                {job.image && (
+  <Box
+    component="img"
+    src={job.image}
+    alt={job.title}
+    sx={{
+      width: "100%",
+      height: 220,
+      objectFit: "cover",
+      borderRadius: 2,
+      mb: 2,
+    }}
+  />
+)}
                 <CardContent>
                   <Typography
                     variant="body1"

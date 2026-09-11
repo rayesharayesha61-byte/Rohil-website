@@ -6104,7 +6104,7 @@ snippet:
 fullContent: (
 <Box sx={{ mt: 2 }}>
 
-```
+
   <Typography
     variant="body1"
     paragraph
