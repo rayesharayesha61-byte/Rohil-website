@@ -961,61 +961,7 @@ export default function MobileApps() {
           ))}
 
         </Container>
-        <Container sx={{ py: 5 }}>
-  <Typography
-    variant="h2"
-    component="h2"
-    sx={{
-      textAlign: "center",
-      fontWeight: "bold",
-      color: colors.darkBlue,
-      mb: 3,
-    }}
-  >
-    Explore Our Technology Services
-  </Typography>
-
-  <Typography
-    sx={{
-      textAlign: "center",
-      color: colors.grey,
-      mb: 4,
-    }}
-  >
-    Explore our other technology and digital solutions for your business.
-  </Typography>
-
-  <Box
-    sx={{
-      display: "flex",
-      flexWrap: "wrap",
-      justifyContent: "center",
-      gap: 2,
-    }}
-  >
-    <Button href="/web-technologies" variant="outlined">
-      Web Development
-    </Button>
-
-    <Button href="/software-development" variant="outlined">
-      Software Development
-    </Button>
-
-    
-
-    <Button href="/crm" variant="outlined">
-      CRM Solutions
-    </Button>
-
-    <Button href="/erp" variant="outlined">
-      ERP Solutions
-    </Button>
-
-    <Button href="/contact" variant="outlined">
-      Contact Us
-    </Button>
-  </Box>
-</Container>
+      
         {/* ===== CTA Section ===== */}
 
         <Container sx={{ py: 8 }}>
