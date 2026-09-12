@@ -133,100 +133,123 @@ export default function MobileApps() {
 
 
       <Helmet>
+  <title>
+    Mobile App Development Company | Rohil Technologies
+  </title>
 
-        <title>
-          Mobile App Development Services | Rohil Technologies
-        </title>
+  <meta
+    name="description"
+    content="Rohil Technologies delivers custom mobile app development solutions for businesses, startups and enterprises, from idea to launch."
+  />
 
-        <meta
-          name="description"
-          content="Professional mobile app development services by Rohil Technologies. Build secure, scalable Android, iOS and cross-platform apps tailored to your business."
-        />
+  <meta
+    name="keywords"
+    content="Mobile App Development Company, Mobile App Development Services, Android App Development, iOS App Development, Cross Platform App Development"
+  />
 
-        <meta
-          name="keywords"
-          content="Mobile App Development Services, Android App Development, iOS App Development"
-        />
+  <link
+    rel="canonical"
+    href="https://www.rohiltechnologies.com/mobile"
+  />
 
-        <link
-          rel="canonical"
-          href="https://www.rohiltechnologies.com/mobile"
-        />
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
 
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
+  <meta
+    property="og:title"
+    content="Mobile App Development Company | Rohil Technologies"
+  />
 
-        <meta
-          property="og:title"
-          content="Mobile App Development Services | Rohil Technologies"
-        />
+  <meta
+    property="og:description"
+    content="Rohil Technologies delivers custom mobile app development solutions for businesses, startups and enterprises, from idea to launch."
+  />
 
-        <meta
-          property="og:description"
-          content="Build secure, scalable Android, iOS and cross-platform mobile apps."
-        />
+  <meta
+    property="og:image"
+    content="https://www.rohiltechnologies.com/images/mobdev.png"
+  />
 
-        <meta
-          property="og:image"
-          content="https://www.rohiltechnologies.com/images/mobdev.png"
-        />
+  <meta
+    property="og:url"
+    content="https://www.rohiltechnologies.com/mobile"
+  />
 
-        <meta
-          property="og:url"
-          content="https://www.rohiltechnologies.com/mobile"
-        />
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
 
-        <meta
-          name="twitter:card"
-          content="summary_large_image"
-        />
+  <meta
+    name="twitter:title"
+    content="Mobile App Development Company | Rohil Technologies"
+  />
 
-        {/* Service Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            serviceType: "Mobile App Development Services",
+  <meta
+    name="twitter:description"
+    content="Rohil Technologies delivers custom mobile app development solutions for businesses, startups and enterprises, from idea to launch."
+  />
 
-            provider: {
-              "@type": "Organization",
-              "name": "Rohil Technologies",
-              "url": "https://www.rohiltechnologies.com"
-            },
+  <meta
+    name="twitter:image"
+    content="https://www.rohiltechnologies.com/images/mobdev.png"
+  />
 
-            areaServed: "India",
+  {/* Service Schema */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      serviceType: "Mobile App Development Services",
+      provider: {
+        "@type": "Organization",
+        name: "Rohil Technologies",
+        url: "https://www.rohiltechnologies.com",
+      },
+      areaServed: "India",
+      description:
+        "Rohil Technologies delivers custom mobile app development solutions for businesses, startups and enterprises, from idea to launch.",
+    })}
+  </script>
 
-            description:
-              "Professional Android, iOS and cross-platform mobile application development services."
-          })}
-        </script>
+  {/* Breadcrumb Schema */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://www.rohiltechnologies.com",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Mobile App Development",
+          item: "https://www.rohiltechnologies.com/mobile",
+        },
+      ],
+    })}
+  </script>
 
-        {/* Breadcrumb Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-
-            "@type": "BreadcrumbList",
-
-            itemListElement: [
-              {
-                "@type": "ListItem",
-                position: 1,
-                name: "Home",
-                item: "https://www.rohiltechnologies.com"
-              },
-
-              {
-                "@type": "ListItem",
-                position: 2,
-                name: "Mobile App Development",
-                item: "https://www.rohiltechnologies.com/mobile"
-              }
-            ]
-          })}
-        </script>
-
-      </Helmet>
+  {/* FAQ Schema */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faq.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.a,
+        },
+      })),
+    })}
+  </script>
+</Helmet>
       {/* ===== Hero Banner ===== */}
       <Box
         sx={{
@@ -244,21 +267,197 @@ export default function MobileApps() {
       >
         <Box sx={{ position: "relative", zIndex: 2 }}>
           <Typography
-            variant="h1"
-            sx={{
-              fontWeight: "bold",
-              mb: 2,
-              fontSize: { xs: "2rem", md: "3rem" },
-            }}
-          >
-            Mobile App Development Services
-          </Typography>
+  variant="h1"
+  component="h1"
+  sx={{
+    fontWeight: "bold",
+    mb: 2,
+    fontSize: { xs: "2rem", md: "3rem" },
+  }}
+>
+  Mobile App Development That Moves Your Business Forward
+</Typography>
         </Box>
         <Box
           sx={{ position: "absolute", inset: 0, bgcolor: "rgba(0,0,0,0.5)" }}
         />
       </Box>
+{/* ===== SEO Content ===== */}
 
+<Container sx={{ py: 7 }}>
+  <Typography
+    variant="h2"
+    component="h2"
+    sx={{
+      fontWeight: "bold",
+      color: colors.darkBlue,
+      mb: 3,
+    }}
+  >
+    Custom Mobile App Development
+  </Typography>
+
+  <Typography sx={{ color: colors.grey, mb: 2, lineHeight: 1.9 }}>
+    Turn your app idea into a reliable, user-friendly digital product with
+    custom mobile app development from Rohil Technologies. We build
+    applications around your business goals, customer needs and workflow
+    instead of relying on one-size-fits-all solutions.
+  </Typography>
+
+  <Typography sx={{ color: colors.grey, mb: 5, lineHeight: 1.9 }}>
+    From simple business applications to feature-rich digital platforms, our
+    development approach focuses on performance, usability, scalability and a
+    smooth user experience.
+  </Typography>
+
+  <Typography
+    variant="h2"
+    component="h2"
+    sx={{
+      fontWeight: "bold",
+      color: colors.darkBlue,
+      mb: 3,
+    }}
+  >
+    Android & iOS App Development
+  </Typography>
+
+  <Typography sx={{ color: colors.grey, mb: 2, lineHeight: 1.9 }}>
+    Reach your customers across the platforms they use every day. Our Android
+    app development and iOS solutions are designed to deliver consistent
+    performance and intuitive experiences across devices.
+  </Typography>
+
+  <Typography sx={{ color: colors.grey, mb: 5, lineHeight: 1.9 }}>
+    Whether you are launching a new product or extending an existing business
+    into mobile, we help transform your requirements into a practical
+    application.
+  </Typography>
+
+  <Typography
+    variant="h2"
+    component="h2"
+    sx={{
+      fontWeight: "bold",
+      color: colors.darkBlue,
+      mb: 3,
+    }}
+  >
+    Cross-Platform App Solutions
+  </Typography>
+
+  <Typography sx={{ color: colors.grey, mb: 2, lineHeight: 1.9 }}>
+    Need to launch on multiple platforms without maintaining completely
+    separate applications?
+  </Typography>
+
+  <Typography sx={{ color: colors.grey, mb: 5, lineHeight: 1.9 }}>
+    Our cross-platform app development approach helps businesses build
+    efficient mobile experiences while reducing unnecessary development
+    complexity. The solution is planned according to your project
+    requirements, features and future scalability.
+  </Typography>
+
+  <Typography
+    variant="h2"
+    component="h2"
+    sx={{
+      fontWeight: "bold",
+      color: colors.darkBlue,
+      mb: 3,
+    }}
+  >
+    Mobile Apps Built Around Your Goals
+  </Typography>
+
+  <Typography sx={{ color: colors.grey, mb: 2, lineHeight: 1.9 }}>
+    A successful application is more than attractive screens. It needs to
+    solve a real problem.
+  </Typography>
+
+  <Typography sx={{ color: colors.grey, mb: 2 }}>
+    Our mobile application development process focuses on:
+  </Typography>
+
+  <Box
+    component="ul"
+    sx={{
+      color: colors.grey,
+      lineHeight: 2,
+      mb: 5,
+      pl: 3,
+    }}
+  >
+    <li>Business-focused features</li>
+    <li>Simple and intuitive navigation</li>
+    <li>Responsive user experience</li>
+    <li>Secure application architecture</li>
+    <li>Scalable technology</li>
+    <li>Performance-focused development</li>
+    <li>Easy future enhancements</li>
+  </Box>
+
+  <Typography
+    variant="h2"
+    component="h2"
+    sx={{
+      fontWeight: "bold",
+      color: colors.darkBlue,
+      mb: 3,
+    }}
+  >
+    From Idea to App Launch
+  </Typography>
+
+  <Typography sx={{ color: colors.grey, mb: 2, lineHeight: 1.9 }}>
+    Have an idea but not sure where to begin?
+  </Typography>
+
+  <Typography sx={{ color: colors.grey, mb: 2, lineHeight: 1.9 }}>
+    Rohil Technologies can support your journey from concept and planning to
+    development and launch. We understand your requirements, define the right
+    approach and develop a mobile solution designed for real-world usage.
+  </Typography>
+
+  <Typography sx={{ color: colors.grey, mb: 5, lineHeight: 1.9 }}>
+    Whether you're a startup validating an idea or an established business
+    looking to build a dedicated app, our team focuses on creating technology
+    that delivers practical value.
+  </Typography>
+
+  <Typography
+    variant="h2"
+    component="h2"
+    sx={{
+      fontWeight: "bold",
+      color: colors.darkBlue,
+      mb: 3,
+    }}
+  >
+    Why Choose Rohil Technologies?
+  </Typography>
+
+  <Typography sx={{ color: colors.grey, mb: 2, lineHeight: 1.9 }}>
+    We combine technical expertise with a business-first approach to create
+    mobile solutions that are built for usability and growth.
+  </Typography>
+
+  <Typography
+    sx={{
+      color: colors.primary,
+      fontWeight: "bold",
+      fontSize: "1.1rem",
+      mb: 2,
+    }}
+  >
+    Plan. Build. Launch. Scale.
+  </Typography>
+
+  <Typography sx={{ color: colors.grey, lineHeight: 1.9 }}>
+    Let's turn your mobile app idea into a product your customers can use and
+    your business can grow with.
+  </Typography>
+</Container>
       {/* ===== Section: Intro ===== */}
       <Container sx={{ py: 4 }}>
         <Box
@@ -353,7 +552,7 @@ export default function MobileApps() {
       {/* Service */}
       <Container sx={{ py: 4 }}>
         <Typography
-          variant="h1"
+          variant="h2"
           sx={{
             textAlign: "center",
             fontWeight: "bold",
@@ -762,6 +961,61 @@ export default function MobileApps() {
           ))}
 
         </Container>
+        <Container sx={{ py: 5 }}>
+  <Typography
+    variant="h2"
+    component="h2"
+    sx={{
+      textAlign: "center",
+      fontWeight: "bold",
+      color: colors.darkBlue,
+      mb: 3,
+    }}
+  >
+    Explore Our Technology Services
+  </Typography>
+
+  <Typography
+    sx={{
+      textAlign: "center",
+      color: colors.grey,
+      mb: 4,
+    }}
+  >
+    Explore our other technology and digital solutions for your business.
+  </Typography>
+
+  <Box
+    sx={{
+      display: "flex",
+      flexWrap: "wrap",
+      justifyContent: "center",
+      gap: 2,
+    }}
+  >
+    <Button href="/web-technologies" variant="outlined">
+      Web Development
+    </Button>
+
+    <Button href="/software-development" variant="outlined">
+      Software Development
+    </Button>
+
+    
+
+    <Button href="/crm" variant="outlined">
+      CRM Solutions
+    </Button>
+
+    <Button href="/erp" variant="outlined">
+      ERP Solutions
+    </Button>
+
+    <Button href="/contact" variant="outlined">
+      Contact Us
+    </Button>
+  </Box>
+</Container>
         {/* ===== CTA Section ===== */}
 
         <Container sx={{ py: 8 }}>
