@@ -124,6 +124,12 @@ export default function WebTechnologies() {
       text: "Empower your business with feature-rich, secure, and scalable online stores built for growth and customer engagement.",
       icon: "mdi:cart-outline",
     },
+    {
+  title: "Website Development",
+  text: "We create responsive, user-friendly websites tailored to your business goals, ensuring a seamless user experience.",
+  icon: "mdi:web",
+  path: "/web-technologies",
+},
   ];
   const steps = [
     { title: "Requirement Analysis", icon: <Assignment /> },
@@ -166,7 +172,169 @@ export default function WebTechnologies() {
           sx={{ position: "absolute", inset: 0, bgcolor: "rgba(0,0,0,0.5)" }}
         />
       </Box>
+{/* ===== SEO Optimized Website Development Content ===== */}
+<Container sx={{ py: 5 }}>
+  <Typography
+    variant="h2"
+    sx={{
+      mb: 3,
+      fontWeight: "bold",
+      color: colors.darkBlue,
+      fontSize: { xs: "1.8rem", md: "2.2rem" },
+    }}
+  >
+    Professional Website Development Services
+  </Typography>
 
+  <Typography
+    sx={{ color: colors.grey, mb: 2, lineHeight: 1.8 }}
+  >
+    Your website is often the first place customers discover your
+    brand. Rohil Technologies provides professional website
+    development services to create modern, responsive, secure, and
+    user-friendly websites that support your business goals. From
+    business websites to custom web solutions, we build websites that
+    combine attractive design, smooth performance, and practical
+    functionality.
+  </Typography>
+
+  <Typography
+    variant="h2"
+    sx={{
+      mb: 2,
+      mt: 4,
+      fontWeight: "bold",
+      color: colors.darkBlue,
+      fontSize: { xs: "1.5rem", md: "1.8rem" },
+    }}
+  >
+    Custom Website Development for Your Business
+  </Typography>
+
+  <Typography sx={{ color: colors.grey, mb: 2, lineHeight: 1.8 }}>
+    Every business has different requirements. Our custom website
+    development approach focuses on understanding your business,
+    audience, and objectives before building the right digital
+    solution. We create websites with a clean structure, intuitive
+    navigation, and flexible features that can grow along with your
+    business.
+  </Typography>
+
+  <Typography
+    variant="h2"
+    sx={{
+      mb: 2,
+      mt: 4,
+      fontWeight: "bold",
+      color: colors.darkBlue,
+      fontSize: { xs: "1.5rem", md: "1.8rem" },
+    }}
+  >
+    Responsive Web Development
+  </Typography>
+
+  <Typography sx={{ color: colors.grey, mb: 2, lineHeight: 1.8 }}>
+    Today, customers access websites from smartphones, tablets,
+    laptops, and desktops. Our responsive web development process
+    ensures your website adapts smoothly to different screen sizes
+    and provides a consistent browsing experience across devices.
+    We focus on mobile-friendly layouts, easy navigation, fast-loading
+    pages, and a user experience that keeps visitors engaged.
+  </Typography>
+
+  <Typography
+    variant="h2"
+    sx={{
+      mb: 2,
+      mt: 4,
+      fontWeight: "bold",
+      color: colors.darkBlue,
+      fontSize: { xs: "1.5rem", md: "1.8rem" },
+    }}
+  >
+    Business Website Development
+  </Typography>
+
+  <Typography sx={{ color: colors.grey, mb: 2, lineHeight: 1.8 }}>
+    Whether you are launching a new company or improving an existing
+    online presence, our business website development services help
+    present your brand professionally online. We create structured
+    pages for your services, products, company information, projects,
+    and contact details, making it easier for visitors to understand
+    what you offer.
+  </Typography>
+
+  <Typography
+    variant="h2"
+    sx={{
+      mb: 2,
+      mt: 4,
+      fontWeight: "bold",
+      color: colors.darkBlue,
+      fontSize: { xs: "1.5rem", md: "1.8rem" },
+    }}
+  >
+    SEO-Friendly Website Development
+  </Typography>
+
+  <Typography sx={{ color: colors.grey, mb: 2, lineHeight: 1.8 }}>
+    A visually attractive website also needs a strong technical and
+    content foundation. Our SEO-friendly website development approach
+    considers clean page structure, heading hierarchy, mobile
+    responsiveness, image optimization, internal linking, and
+    search-engine-friendly elements during development. This helps
+    create a better foundation for your ongoing SEO and digital
+    marketing efforts.
+  </Typography>
+
+  <Typography
+    variant="h2"
+    sx={{
+      mb: 2,
+      mt: 4,
+      fontWeight: "bold",
+      color: colors.darkBlue,
+      fontSize: { xs: "1.5rem", md: "1.8rem" },
+    }}
+  >
+    Why Choose Rohil Technologies?
+  </Typography>
+
+  <Box component="ul" sx={{ color: colors.grey, lineHeight: 2 }}>
+    <li>Custom website solutions based on your requirements</li>
+    <li>Responsive and mobile-friendly design</li>
+    <li>Clean and user-focused navigation</li>
+    <li>Performance-focused development</li>
+    <li>SEO-friendly website structure</li>
+    <li>Scalable solutions for growing businesses</li>
+    <li>Reliable technical support</li>
+  </Box>
+
+  <Typography
+    variant="h2"
+    sx={{
+      mb: 2,
+      mt: 4,
+      fontWeight: "bold",
+      color: colors.darkBlue,
+      fontSize: { xs: "1.5rem", md: "1.8rem" },
+    }}
+  >
+    Build a Website That Works for Your Business
+  </Typography>
+
+  <Typography sx={{ color: colors.grey, lineHeight: 1.8 }}>
+    Your website should do more than simply display information.
+    It should communicate your brand, connect with your audience,
+    and support your business objectives. Rohil Technologies combines
+    technology, design, and development expertise to create websites
+    that are built for performance and long-term growth. Have a
+    website idea in mind? Let's build a digital presence that works
+    for you.
+  </Typography>
+</Container>
+
+<Divider />
       {/* ===== Section: Intro ===== */}
       <Container sx={{ py: 4 }}>
         <Box
@@ -310,6 +478,20 @@ export default function WebTechnologies() {
               >
                 {item.title}
               </Typography>
+              <Box
+  component="button"
+  onClick={() => navigate(item.path)}
+  sx={{
+    mt: 2,
+    border: "none",
+    background: "transparent",
+    color: colors.primary,
+    fontWeight: "bold",
+    cursor: "pointer",
+  }}
+>
+  Explore Website Development
+</Box>
               <Typography sx={{ color: colors.grey }}>{item.text}</Typography>
             </Box>
           ))}
