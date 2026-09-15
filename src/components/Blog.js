@@ -7627,35 +7627,7 @@ fullContent: (
         Rohil Technologies helps businesses explore modern technology solutions that can improve digital experiences, streamline workflows, and support business growth. Understanding AI integration is an important step toward building intelligent software solutions that connect AI with the systems businesses use every day.
       </Typography>
 
-      <Divider sx={{ my: 2, borderColor: colors.grey }} />
-
-      <Typography
-        variant="body2"
-        sx={{ color: colors.grey, fontStyle: "italic" }}
-      >
-        SEO Keywords Used
-        <br />
-        <br />
-        Primary Keyword:
-        <br />
-        Model Context Protocol (MCP)
-        <br />
-        <br />
-        Secondary Keywords:
-        <br />
-        AI integration, MCP integration, AI agents, AI automation, enterprise AI, LLM applications, AI-powered applications, AI tools, API integration, intelligent software solutions, AI agent development.
-        <br />
-        <br />
-        Suggested SEO Title:
-        <br />
-        Model Context Protocol (MCP): The Future of AI Integration
-        <br />
-        <br />
-        Suggested Meta Description:
-        <br />
-        Learn how Model Context Protocol (MCP) connects AI applications with tools, data, and services, and why it matters for AI agents and enterprise automation.
-      </Typography>
-
+     
     </Box>
   ),
 },
