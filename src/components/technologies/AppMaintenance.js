@@ -189,47 +189,40 @@ export default function AppMaintenance() {
 
 
       <Helmet>
-        <title>
-          Application Maintenance Services | Rohil Technologies
-        </title>
+  <title>Application Maintenance Services | Rohil Technologies</title>
 
-        <meta
-          name="description"
-          content="Professional application maintenance services by Rohil Technologies. Improve software performance, security, monitoring, and support."
-        />
+  <meta
+    name="description"
+    content="Rohil Technologies provides reliable application maintenance services to improve software performance, security, scalability, and long-term application reliability."
+  />
 
-        <meta
-          name="keywords"
-          content="
-Application Maintenance Services,
-Software Maintenance Services,
-Application Support Services,
-Application Monitoring
-"
-        />
+  <meta
+    name="keywords"
+    content="Application Maintenance Services, Software Maintenance Services, Application Support Services, Application Monitoring, Application Performance Optimization, Software Support Services"
+  />
 
-        <link
-          rel="canonical"
-          href="https://www.rohiltechnologies.com/application-maintenance"
-        />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
+  <link
+    rel="canonical"
+    href="https://www.rohiltechnologies.com/application-maintenance"
+  />
 
-            "@type": "Service",
-
-            "name": "Application Maintenance Services",
-
-            "description":
-              "Professional application maintenance and support services.",
-
-            "provider": {
-              "@type": "Organization",
-              "name": "Rohil Technologies"
-            }
-          })}
-        </script>
-      </Helmet>
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: "Application Maintenance Services",
+      description:
+        "Rohil Technologies provides reliable application maintenance services to improve software performance, security, scalability, and long-term application reliability.",
+      provider: {
+        "@type": "Organization",
+        name: "Rohil Technologies",
+        url: "https://www.rohiltechnologies.com",
+      },
+      areaServed: "Worldwide",
+      serviceType: "Application Maintenance Services",
+    })}
+  </script>
+</Helmet>
       {/* ===== Hero Banner ===== */}
       <Box
         sx={{
@@ -246,17 +239,17 @@ Application Monitoring
         }}
       >
         <Box sx={{ position: "relative", zIndex: 2 }}>
-          <Typography
-            component="h2"
-            variant="h3"
-            sx={{
-              fontWeight: "bold",
-              mb: 2,
-              fontSize: { xs: "2rem", md: "3rem" },
-            }}
-          >
-            Application Maintenance & Support
-          </Typography>
+         <Typography
+  component="h1"
+  variant="h3"
+  sx={{
+    fontWeight: "bold",
+    mb: 2,
+    fontSize: { xs: "2rem", md: "3rem" },
+  }}
+>
+  Application Maintenance Services
+</Typography>
         </Box>
         <Box
           sx={{ position: "absolute", inset: 0, bgcolor: "rgba(0,0,0,0.5)" }}
@@ -274,12 +267,17 @@ Application Monitoring
         >
           {/* Text Section */}
           <Box sx={{ flex: 1 }}>
-            <Typography
-              variant="h3"
-              sx={{ fontWeight: "bold", color: colors.darkBlue, mb: 3 }}
-            >
-              Application Maintenance & Support
-            </Typography>
+         <Typography
+  component="h2"
+  variant="h3"
+  sx={{
+    fontWeight: "bold",
+    color: colors.darkBlue,
+    mb: 3,
+  }}
+>
+  Reliable Application Support and Maintenance
+</Typography>
             <Typography sx={{ color: colors.grey, mb: 2 }}>
               Our Application Maintenance and Support services ensure your
               software continues to run efficiently, securely, and with
@@ -608,6 +606,113 @@ Application Monitoring
         </Grid>
 
       </Container>
+      <Box
+  component="section"
+  sx={{
+    py: { xs: 5, md: 8 },
+    backgroundColor: "#fff",
+  }}
+>
+  <Container maxWidth="lg">
+    <Typography
+      component="h2"
+      sx={{
+        textAlign: "center",
+        fontWeight: 700,
+        color: colors.primary,
+        fontSize: { xs: "1.8rem", md: "2.5rem" },
+        mb: 1.5,
+      }}
+    >
+      Core Maintenance Services
+    </Typography>
+
+    <Typography
+      sx={{
+        textAlign: "center",
+        color: colors.grey,
+        maxWidth: 750,
+        mx: "auto",
+        lineHeight: 1.8,
+        mb: { xs: 4, md: 5 },
+      }}
+    >
+      Our application maintenance services help keep your software
+      secure, reliable, scalable, and optimized for long-term performance.
+    </Typography>
+
+    <Grid container spacing={3}>
+      {maintenanceTypes.map((item, index) => (
+        <Grid item xs={12} sm={6} md={3} key={index}>
+          <Box
+            sx={{
+              height: "100%",
+              minHeight: 180,
+              p: 3,
+              textAlign: "center",
+              borderRadius: 3,
+              border: "1px solid #e5e7eb",
+              backgroundColor: "#fff",
+              boxShadow: "0 5px 18px rgba(0,0,0,0.06)",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              transition: "all 0.3s ease",
+
+              "&:hover": {
+                transform: "translateY(-6px)",
+                boxShadow: "0 12px 28px rgba(0,0,0,0.10)",
+                borderColor: colors.primary,
+              },
+            }}
+          >
+            <Box
+              sx={{
+                width: 50,
+                height: 50,
+                borderRadius: "50%",
+                backgroundColor: `${colors.primary}15`,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                mb: 2,
+              }}
+            >
+              <Icon
+                icon="mdi:check-circle-outline"
+                width="28"
+                color={colors.primary}
+              />
+            </Box>
+
+            <Typography
+              component="h3"
+              sx={{
+                fontWeight: 700,
+                color: colors.primary,
+                fontSize: "1.05rem",
+                mb: 1,
+              }}
+            >
+              {item.title}
+            </Typography>
+
+            <Typography
+              sx={{
+                color: colors.grey,
+                fontSize: "0.9rem",
+                lineHeight: 1.6,
+              }}
+            >
+              {item.desc}
+            </Typography>
+          </Box>
+        </Grid>
+      ))}
+    </Grid>
+  </Container>
+</Box>
       <Container sx={{ py: 6 }}>
 
         <Typography
