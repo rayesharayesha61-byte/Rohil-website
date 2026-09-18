@@ -609,24 +609,36 @@ export default function AppMaintenance() {
       <Box
   component="section"
   sx={{
-    py: { xs: 5, md: 8 },
+    py: { xs: 4, sm: 5, md: 8 },
     backgroundColor: "#fff",
   }}
 >
-  <Container maxWidth="lg">
+  <Container
+    maxWidth="lg"
+    sx={{
+      px: { xs: 2, sm: 3, md: 4 },
+    }}
+  >
+    {/* Heading */}
     <Typography
       component="h2"
       sx={{
         textAlign: "center",
         fontWeight: 700,
         color: colors.primary,
-        fontSize: { xs: "1.8rem", md: "2.5rem" },
+        fontSize: {
+          xs: "1.7rem",
+          sm: "2rem",
+          md: "2.5rem",
+        },
+        lineHeight: 1.3,
         mb: 1.5,
       }}
     >
       Core Maintenance Services
     </Typography>
 
+    {/* Description */}
     <Typography
       sx={{
         textAlign: "center",
@@ -634,75 +646,146 @@ export default function AppMaintenance() {
         maxWidth: 750,
         mx: "auto",
         lineHeight: 1.8,
-        mb: { xs: 4, md: 5 },
+        fontSize: {
+          xs: "0.9rem",
+          sm: "0.95rem",
+          md: "1rem",
+        },
+        mb: {
+          xs: 3,
+          sm: 4,
+          md: 5,
+        },
       }}
     >
       Our application maintenance services help keep your software
       secure, reliable, scalable, and optimized for long-term performance.
     </Typography>
 
-    <Grid container spacing={3}>
+    {/* Cards */}
+    <Grid
+      container
+      spacing={{
+        xs: 2,
+        sm: 2.5,
+        md: 3,
+      }}
+    >
       {maintenanceTypes.map((item, index) => (
-        <Grid item xs={12} sm={6} md={3} key={index}>
+        <Grid
+          item
+          xs={12}
+          sm={6}
+          md={3}
+          key={index}
+        >
           <Box
             sx={{
-              height: "100%",
-              minHeight: 180,
-              p: 3,
+              width: "100%",
+              minHeight: {
+                xs: 165,
+                sm: 175,
+                md: 180,
+              },
+              p: {
+                xs: 2.5,
+                sm: 3,
+                md: 3,
+              },
+
               textAlign: "center",
-              borderRadius: 3,
+
+              borderRadius: {
+                xs: 2.5,
+                md: 3,
+              },
+
               border: "1px solid #e5e7eb",
               backgroundColor: "#fff",
-              boxShadow: "0 5px 18px rgba(0,0,0,0.06)",
+
+              boxShadow: "0 4px 16px rgba(0,0,0,0.06)",
+
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
+
               transition: "all 0.3s ease",
 
               "&:hover": {
-                transform: "translateY(-6px)",
+                transform: {
+                  xs: "none",
+                  md: "translateY(-6px)",
+                },
                 boxShadow: "0 12px 28px rgba(0,0,0,0.10)",
                 borderColor: colors.primary,
               },
             }}
           >
+            {/* Icon */}
             <Box
               sx={{
-                width: 50,
-                height: 50,
+                width: {
+                  xs: 46,
+                  sm: 48,
+                  md: 50,
+                },
+                height: {
+                  xs: 46,
+                  sm: 48,
+                  md: 50,
+                },
                 borderRadius: "50%",
                 backgroundColor: `${colors.primary}15`,
+
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                mb: 2,
+
+                mb: 1.5,
               }}
             >
               <Icon
                 icon="mdi:check-circle-outline"
-                width="28"
+                width={27}
+                height={27}
                 color={colors.primary}
               />
             </Box>
 
+            {/* Title */}
             <Typography
               component="h3"
               sx={{
                 fontWeight: 700,
                 color: colors.primary,
-                fontSize: "1.05rem",
+                fontSize: {
+                  xs: "0.98rem",
+                  sm: "1rem",
+                  md: "1.05rem",
+                },
+                lineHeight: 1.4,
                 mb: 1,
               }}
             >
               {item.title}
             </Typography>
 
+            {/* Description */}
             <Typography
               sx={{
                 color: colors.grey,
-                fontSize: "0.9rem",
+                fontSize: {
+                  xs: "0.85rem",
+                  sm: "0.88rem",
+                  md: "0.9rem",
+                },
                 lineHeight: 1.6,
+                maxWidth: {
+                  xs: 280,
+                  sm: 300,
+                  md: "100%",
+                },
               }}
             >
               {item.desc}
