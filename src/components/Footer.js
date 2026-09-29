@@ -18,6 +18,7 @@ import {
   Twitter,
   LinkedIn,
   Instagram,
+  YouTube,
   BusinessCenter,
   ManageAccounts,
   Business,
@@ -227,7 +228,8 @@ const Footer = () => {
                   IconComp: Instagram,
                   url: "https://www.instagram.com/rohiltechnologies/",
                 },
-                { IconComp: LinkedIn, url: "" },
+                { IconComp: LinkedIn, url: "https://www.linkedin.com/in/sofia-deepanraj-56253135a/" },
+                 { IconComp: YouTube, url: "https://www.youtupe.com/@rohiltechnologies" },
               ].map(({ IconComp, url }, i) => (
                 <IconButton
                   key={i}
@@ -411,7 +413,7 @@ const Footer = () => {
                 <ListItemText
                   primary={
                     <>
-                      +91 78249 28339 <br /> +91 97518 67879
+                      +91 78249 28339 
                     </>
                   }
                   primaryTypographyProps={{

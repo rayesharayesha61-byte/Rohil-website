@@ -26,7 +26,7 @@ const Specialities = () => {
         if (entries[0].isIntersecting && !countersInitialized.current) {
           const options = { duration: 2.5, separator: "," };
 
-          new CountUp("years-count", 6, { ...options, suffix: "+" }).start();
+          new CountUp("years-count", 8, { ...options, suffix: "+" }).start();
           new CountUp("Projects-count", 200, {
             ...options,
             suffix: "+",
