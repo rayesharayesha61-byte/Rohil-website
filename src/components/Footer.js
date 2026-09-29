@@ -229,7 +229,7 @@ const Footer = () => {
                   url: "https://www.instagram.com/rohiltechnologies/",
                 },
                 { IconComp: LinkedIn, url: "https://www.linkedin.com/in/sofia-deepanraj-56253135a/" },
-                 { IconComp: YouTube, url: "https://www.youtupe.com/@rohiltechnologies" },
+                 { IconComp: YouTube, url: "https://www.youtube.com/@rohiltechnologies" },
               ].map(({ IconComp, url }, i) => (
                 <IconButton
                   key={i}
