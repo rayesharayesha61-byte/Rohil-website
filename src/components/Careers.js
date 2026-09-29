@@ -175,7 +175,131 @@ const jobOpenings = [
   location: "Virudhunagar (Candidates from nearby areas preferred)",
   apply: "Send your resume to admin@rohiltechnologies.com",
 },
+ {
+    title: "Telecaller",
+    positions: 2,
+
+    requirements: [
+      "Good communication and convincing skills preferred.",
+      "Freshers are welcome",
+      "Good communication skills",
+      "Customer handling skills",
+    ],
+
+    benefits: [
+      "Attractive salary package",
+      "Performance-based incentives",
+      "Career growth opportunities",
+    ],
+
+    responsibilities: [
+      "Make outbound calls to potential customers",
+      "Explain company products and services",
+      "Generate leads and schedule appointments",
+      "Follow up with potential customers",
+      "Handle customer queries professionally",
+    ],
+
+    experience: "Freshers / Experienced",
+    location: "Virudhunagar",
+    apply: "Send your resume to admin@rohiltechnologies.com",
+  },
+
+  {
+    title: "Business Development Manager – Rohil Technologies",
+    positions: 1,
+
+    requirements: [
+      "Minimum 5+ years of experience",
+      "Male preferred",
+      "Strong B2B client acquisition skills",
+      "Good communication and negotiation skills",
+      "Strong sales and business development knowledge",
+    ],
+
+    benefits: [
+      "Attractive salary package",
+      "Career growth and learning opportunities",
+      "Performance-based incentives",
+      "Opportunity to work on real-time projects",
+    ],
+
+    responsibilities: [
+      "B2B Client Acquisition & Lead Generation",
+      "IT Services Sales & Business Development",
+      "Client Handling & Relationship Management",
+      "Sales Strategy & Negotiation",
+    ],
+
+    experience: "5+ Years",
+    location: "Virudhunagar",
+    apply: "Send your resume to admin@rohiltechnologies.com",
+  },
+
+  {
+    title: "Digital Marketing Executive",
+    positions: 1,
+
+    requirements: [
+      "Minimum 2+ years of experience",
+      "Knowledge of SEO and Social Media Marketing",
+      "Knowledge of Meta Ads and Google Ads",
+      "Content marketing knowledge",
+      "Lead generation skills",
+    ],
+
+    benefits: [
+      "Attractive salary package",
+      "Learning opportunities in digital marketing",
+      "Career growth opportunities",
+    ],
+
+    responsibilities: [
+      "Manage SEO activities",
+      "Manage social media marketing",
+      "Handle Meta Ads and Google Ads",
+      "Create and manage marketing content",
+      "Generate leads through digital marketing",
+    ],
+
+    experience: "2+ Years",
+    location: "Virudhunagar",
+    apply: "Send your resume to admin@rohiltechnologies.com",
+  },
+
+  {
+    title: "Marketing & Sales Executive",
+    positions: 1,
+
+    requirements: [
+      "Male preferred",
+      "Good communication and convincing skills",
+      "Marketing and sales knowledge",
+      "Client handling skills",
+      "Lead generation and follow-up skills",
+    ],
+
+    benefits: [
+      "Attractive salary package",
+      "Performance-based incentives",
+      "Career growth opportunities",
+    ],
+
+    responsibilities: [
+      "Marketing, Sales & Client Handling",
+      "Meet clients and understand their requirements",
+      "Good communication and convincing",
+      "Field visits to meet clients – Must",
+      "Lead Generation & Follow-ups",
+    ],
+
+    experience: "Experienced / Freshers",
+    location: "Virudhunagar",
+    apply: "Send your resume to admin@rohiltechnologies.com",
+  },
 ];
+
+ 
 
 export default function Careers() {
   return (
